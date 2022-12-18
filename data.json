@@ -344,7 +344,8 @@
 	"thickness": 8.06,
 	"water_resistance": 30,
 	"crystal": "sapphire",
-	"strap": "leather"
+	"strap": "leather",
+	"color": ["gold"]
 },
 {
 	"brand": "Jaeger LeCoultre",
