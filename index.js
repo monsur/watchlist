@@ -20,7 +20,10 @@ let getWatchElement = function(watchData) {
 
   let img = document.createElement("img");
   img.src = "images/" + watchData.image;
-  container.append(img);
+  let watchLink = document.createElement("a");
+  watchLink.href = watchData.link;
+  watchLink.append(img);
+  container.append(watchLink);
 
   let data = document.createElement("div");
   data.className = "description";
