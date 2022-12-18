@@ -49,6 +49,10 @@ let loadWindow =  function() {
     return response.json();
   })
   .then((data) => {
+
+    // Sort by price
+    data.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
+
     createPage(data);
   });
 };
