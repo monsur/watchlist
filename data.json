@@ -158,4 +158,20 @@
 	"crystal": "sapphire",
 	"strap": "steel",
 	"color": ["orange"]
+},
+{
+	"brand": "Rolex",
+	"collection": "GMT-Master II",
+	"type": "travel",
+	"image": "rolex-gmt.jpg",
+	"link": "https://www.rolex.com/watches/gmt-master-ii/m126710blro-0001.html",
+	"price": 10750,
+	"ref": "126710BLRO",
+	"movement": "Rolex Caliber 3285",
+	"frequency": 28800,
+	"diameter": 40,
+	"thickness": 12.1,
+	"water_resistance": 100,
+	"crystal": "sapphire",
+	"strap": "steel"
 }]
