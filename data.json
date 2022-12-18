@@ -409,4 +409,20 @@
 	"water_resistance": 50,
 	"crystal": "sapphire",
 	"strap": "leather"
+},
+{
+	"brand": "Vacheron Constantin",
+	"collection": "Patrimony",
+	"type": "dress",
+	"image": "vc-patrimony.jpg",
+	"link": "https://www.vacheron-constantin.com/us/en/collections/patrimony/81180-000g-9117.html",
+	"price": 20100,
+	"ref": "81180/000G-9117",
+	"movement": "1400",
+	"frequency": 28800,
+	"diameter": 40,
+	"thickness": 6.8,
+	"water_resistance": 30,
+	"crystal": "sapphire",
+	"strap": "leather"
 }]
