@@ -425,4 +425,21 @@
 	"water_resistance": 30,
 	"crystal": "sapphire",
 	"strap": "leather"
+},
+{
+	"brand": "G-Shock",
+	"collection": "5600 Series",
+	"detail": "GWM5610NASA4",
+	"type": "dress",
+	"image": "gshock-nasa.jpg",
+	"link": "https://gshock.casio.com/us/products/collection/limited/gwm5610nasa/",
+	"price": 170,
+	"ref": "GWM5610NASA4",
+	"movement": "quartz",
+	"diameter": 45,
+	"thickness": 12.7,
+	"water_resistance": 200,
+	"crystal": "sapphire",
+	"strap": "rubber",
+	"color": ["orange"]
 }]
