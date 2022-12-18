@@ -207,4 +207,22 @@
 	"water_resistance": 300,
 	"crystal": "sapphire",
 	"strap": "steel"
+},
+{
+	"brand": "Elka",
+	"collection": "X Series",
+	"detail": "X02-0802",
+	"type": "field",
+	"image": "elka.jpg",
+	"link": "https://www.elkawatch.ch/watches-1/elka-x02-0802",
+	"price": 1500,
+	"ref": "X02-0802",
+	"movement": "La Joux Perret G100",
+	"frequency": 28800,
+	"diameter": 41,
+	"thickness": 11.8,
+	"water_resistance": 30,
+	"crystal": "sapphire",
+	"strap": "leather",
+	"color": ["orange"]
 }]
