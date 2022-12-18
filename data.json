@@ -281,7 +281,7 @@
 {
 	"brand": "Breitling",
 	"collection": "Navitimer",
-	"detail": "Navitimer B01 Chronograph",
+	"detail": "Navitimer B01 Chronograph 43",
 	"type": "chronograph",
 	"image": "navitimer-b01.jpg",
 	"link": "https://www.breitling.com/us-en/watches/navitimer/navitimer-b01-chronograph-43-my22/AB0138241G1/",
@@ -294,4 +294,21 @@
 	"water_resistance": 30,
 	"crystal": "sapphire",
 	"strap": "leather"
+},
+{
+	"brand": "Breitling",
+	"collection": "Navitimer",
+	"detail": "Navitimer B02 Chronograph 41 Cosmonaute",
+	"type": "chronograph",
+	"image": "navitimer-b02-cosmonaute.jpg",
+	"link": "https://www.breitling.com/us-en/watches/navitimer/navitimer-b02-chronograph-41/PB02301A1B1/",
+	"price": 11200,
+	"ref": "PB02301A1B1A1",
+	"movement": "Breitling B02",
+	"frequency": 28800,
+	"diameter": 41,
+	"thickness": 13,
+	"water_resistance": 30,
+	"crystal": "sapphire",
+	"strap": "steel"
 }]
