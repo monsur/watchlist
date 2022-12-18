@@ -362,4 +362,20 @@
 	"water_resistance": 50,
 	"crystal": "sapphire",
 	"strap": "leather"
+},
+{
+	"brand": "Audemars Piguet",
+	"collection": "Royal Oak",
+	"type": "dress",
+	"image": "aproyaloak.png",
+	"link": "https://www.audemarspiguet.com/com/en/watch-collection/royal-oak/15500ST.OO.1220ST.02.html",
+	"price": 26600,
+	"ref": "15500ST.OO.1220ST.02",
+	"movement": "AP Calibre 4302",
+	"frequency": 28800,
+	"diameter": 41,
+	"thickness": 10.5,
+	"water_resistance": 50,
+	"crystal": "sapphire",
+	"strap": "steel"
 }]
