@@ -311,4 +311,21 @@
 	"water_resistance": 30,
 	"crystal": "sapphire",
 	"strap": "steel"
+},
+{
+	"brand": "Oris",
+	"collection": "Divers",
+	"detail": "Divers Sixty-Five 12H Calibre 400",
+	"type": "diver",
+	"image": "oris-diver-65.png",
+	"link": "https://oris.ch/en/watch/divers-sixty-five-12h-calibre-400/",
+	"price": 3500,
+	"ref": "01 400 7772 4054-07 5 20 82",
+	"movement": "Oris 400",
+	"frequency": 28800,
+	"diameter": 40,
+	"thickness": 12.8,
+	"water_resistance": 100,
+	"crystal": "sapphire",
+	"strap": "leather"
 }]
