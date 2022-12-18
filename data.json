@@ -378,4 +378,35 @@
 	"water_resistance": 50,
 	"crystal": "sapphire",
 	"strap": "steel"
+},
+{
+	"brand": "Grand Seiko",
+	"collection": "Elegance",
+	"detail": "SBGA293",
+	"type": "dress",
+	"image": "grand-seiko.png",
+	"link": "https://www.grand-seiko.com/us-en/collections/sbga293g",
+	"price": 5200,
+	"ref": "SBGA293",
+	"movement": "Caliber 9R65",
+	"diameter": 40,
+	"thickness": 12.8,
+	"water_resistance": 100,
+	"crystal": "sapphire",
+	"strap": "leather"
+},
+{
+	"brand": "Frederique Constant",
+	"collection": "Classic Worldtimer Manufacture",
+	"type": "travel",
+	"image": "fc-worldtimer.jpg",
+	"link": "https://us.frederiqueconstant.com/products/classics-worldtimer-manufacture-1",
+	"price": 4495,
+	"ref": "FC-718NWWM4H6",
+	"movement": "FC-718",
+	"diameter": 42,
+	"thickness": 12.1,
+	"water_resistance": 50,
+	"crystal": "sapphire",
+	"strap": "leather"
 }]
