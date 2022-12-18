@@ -1,19 +1,18 @@
+#page {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  text-align: center;
+}
 .watch {
-    margin: 10px;
-    border: 0px solid #0000ff;
-    height: auto;
-    width: auto;
-    float: left;
-    text-align: center;
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 200px;
 }
 .watch img {
-    display: inline;
-    margin: 3px;
-    width: 250px;
+    width: 200px;
 }
 .description {
     text-align: center;
     font-weight: normal;
-    width: 250px;
-    margin: 2px;
+    width: 200px;
 }
