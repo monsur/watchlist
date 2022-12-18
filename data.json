@@ -345,4 +345,21 @@
 	"water_resistance": 30,
 	"crystal": "sapphire",
 	"strap": "leather"
+},
+{
+	"brand": "Jaeger LeCoultre",
+	"collection": "Master Ultra Thin",
+	"detail": "Master Ultra Thin Moon",
+	"type": "dress",
+	"image": "jlc-mtu.jpg",
+	"link": "https://www.jaeger-lecoultre.com/us-en/watches/master-ultra-thin/master-ultra-thin-moon-stainless-steel-q1368430",
+	"price": 11000,
+	"ref": "Q1368430",
+	"movement": "Jaeger-LeCoultre Caliber 925",
+	"frequency": 28800,
+	"diameter": 39,
+	"thickness": 9.8,
+	"water_resistance": 50,
+	"crystal": "sapphire",
+	"strap": "leather"
 }]
