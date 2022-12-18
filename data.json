@@ -277,4 +277,21 @@
 	"water_resistance": 30,
 	"crystal": "sapphire",
 	"strap": "leather"
+},
+{
+	"brand": "Breitling",
+	"collection": "Navitimer",
+	"detail": "Navitimer B01 Chronograph",
+	"type": "chronograph",
+	"image": "navitimer-b01.jpg",
+	"link": "https://www.breitling.com/us-en/watches/navitimer/navitimer-b01-chronograph-43-my22/AB0138241G1/",
+	"price": 9100,
+	"ref": "AB0138241G1P1",
+	"movement": "Breitling 01",
+	"frequency": 28800,
+	"diameter": 43,
+	"thickness": 13.6,
+	"water_resistance": 30,
+	"crystal": "sapphire",
+	"strap": "leather"
 }]
