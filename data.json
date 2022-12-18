@@ -328,4 +328,21 @@
 	"water_resistance": 100,
 	"crystal": "sapphire",
 	"strap": "leather"
+},
+{
+	"brand": "Vacheron Constantin",
+	"collection": "Historiques",
+	"detail": "Historiques American 1921",
+	"type": "dress",
+	"image": "vacheron-constantin-american-1921.jpg",
+	"link": "https://www.vacheron-constantin.com/us/en/collections/historiques/82035-000r-9359.html",
+	"price": 36800,
+	"ref": "82035/000R-9359",
+	"movement": "4400 AS",
+	"frequency": 28800,
+	"diameter": 40,
+	"thickness": 8.06,
+	"water_resistance": 30,
+	"crystal": "sapphire",
+	"strap": "leather"
 }]
