@@ -493,4 +493,20 @@
 	"crystal": "sapphire",
 	"strap": "velcro",
 	"color": ["orange"]
+},
+{
+	"brand": "Hamilton",
+	"collection": "Khaki Field",
+	"detail":"Mechanical 38",
+	"type": "field",
+	"image": "hamilton-khaki-field.jpg",
+	"link": "https://www.hamiltonwatch.com/en-us/h69439411-khaki-field.html",
+	"price": 495,
+	"ref": "H69439411",
+	"movement": "H-50",
+	"diameter": 38,
+	"thickness": 13,
+	"water_resistance": 50,
+	"crystal": "sapphire",
+	"strap": "fabric"
 }]
