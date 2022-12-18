@@ -1,0 +1,19 @@
+.watch {
+    margin: 10px;
+    border: 0px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+.watch img {
+    display: inline;
+    margin: 3px;
+    width: 250px;
+}
+.description {
+    text-align: center;
+    font-weight: normal;
+    width: 250px;
+    margin: 2px;
+}
