@@ -504,9 +504,27 @@
 	"price": 495,
 	"ref": "H69439411",
 	"movement": "H-50",
+	"frequency": 28800,
 	"diameter": 38,
 	"thickness": 13,
 	"water_resistance": 50,
 	"crystal": "sapphire",
 	"strap": "fabric"
+},
+{
+	"brand": "F.P. Journe",
+	"collection": "Classique",
+	"detail":"Chronometre Souverain",
+	"type": "dress",
+	"image": "fpj.jpg",
+	"link": "https://www.fpjourne.com/en/collection/classique-collection/chronometre-souverain",
+	"price": 50000,
+	"ref": "H69439411",
+	"movement": "Calibre 1304",
+	"frequency": 21600	,
+	"diameter": 40,
+	"thickness": 8,
+	"water_resistance": 0,
+	"crystal": "sapphire",
+	"strap": "leather"
 }]
