@@ -12,15 +12,17 @@ import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
-    path: "/watchlist",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "watchlist/item/:itemId",
+    path: "/item/:itemId",
     element: <Item />,
   },
-]);
+], {
+  basename: '/' + process.env.PUBLIC_URL
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
