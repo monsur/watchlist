@@ -9,11 +9,17 @@ function App() {
     };
   };
 
-  data.sort(getSortFunction());
+  let getFilterFunction = function() {
+    return function(item) {
+      return true;
+    };
+  };
+
+  var dataCopy = data.filter(getFilterFunction()).sort(getSortFunction());
 
   return (
     <div className="App">
-      <Grid data={data} />
+      <Grid data={dataCopy} />
     </div>
   );
 }
