@@ -6,12 +6,19 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './App';
+import Item from './Item';
+import ErrorPage from "./error-page";
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/watchlist",
     element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "watchlist/item/:itemId",
+    element: <Item />,
   },
 ]);
 
