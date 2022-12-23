@@ -1,19 +1,11 @@
-body {
-    font-family: Helvetica, Arial, sans-serif;
-}
-#page {
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  text-align: center;
-}
-.watch {
+.GridItem {
   border: 0px solid rgba(0, 0, 0, 0.8);
   text-align: center;
   width: 150px;
   margin-right: 100px;
   margin-bottom: 100px;
 }
-.watch img {
+.GridItem img {
     width: 150px;
     border: 0px;
 }
