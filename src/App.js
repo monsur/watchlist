@@ -14,13 +14,11 @@ function App() {
 
   let getFilterFunction = function() {
     var filters = {};
-    var hasFilters = false;
-
+ 
     // Parse query parameters for any filters. Filters being with 'f:'.
     for (const [key, value] of searchParams.entries()) {
       if (key.startsWith('f:')) {
         filters[key.substring(2)] = value;
-        hasFilters = true;
       }
     }
 
@@ -35,7 +33,7 @@ function App() {
           return false;
         }
         // using &= since all values need to be true to return true.
-        hasItem &= value.toLowerCase() == filters[property].toLowerCase();
+        hasItem &= value.toLowerCase() === filters[property].toLowerCase();
       }
       return hasItem;
     }}(filters);
