@@ -14,7 +14,7 @@ function GridItem(props) {
   return (
     <div className='GridItem'>
       <a href={item.link}>
-        <img src={'./images/' + item.image} alt={itemName} />
+        <img src={process.env.PUBLIC_URL + '/images/' + item.image} alt={itemName} />
       </a>
       <div className="description">
         <div>{itemName}</div>
