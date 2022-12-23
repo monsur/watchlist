@@ -16,32 +16,26 @@ function App() {
     var filters = {};
     var hasFilters = false;
 
+    // Parse query parameters for any filters. Filters being with 'f:'.
     for (const [key, value] of searchParams.entries()) {
       if (key.startsWith('f:')) {
-        filters[key.substring(2)] = value.toLowerCase();
+        filters[key.substring(2)] = value;
         hasFilters = true;
       }
     }
 
-    if (!hasFilters) {
-      return function(item) {
-        return true;
-      };
-    }
-
+    // Check each item against each key in the filter. All filters must be true to
+    // return true. If there are no filters, defaults to true.
     return function(filters) {return function(item) {
       var hasItem = true;
       for (const property in filters) {
         let value = item[property];
         if (!value) {
+          // Item doesn't have this property, no need to continue checking.
           return false;
         }
-        value = value.toLowerCase();
-        if (value == filters[property]) {
-          hasItem &= true;
-        } else {
-          hasItem &= false;
-        }
+        // using &= since all values need to be true to return true.
+        hasItem &= value.toLowerCase() == filters[property].toLowerCase();
       }
       return hasItem;
     }}(filters);
