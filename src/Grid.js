@@ -6,10 +6,10 @@ function Grid(props) {
     <Grid2
       container
       spacing={{ xs: 2, md: 3 }}
-      columns={{ xs: 4, sm: 8, md: 12 }}
+      columns={12}
     >
       {props.data.map((item) => (
-        <Grid2 xs={2} sm={4} md={4} key={item.id}>
+        <Grid2 xs={6} sm={4} md={4} lg={2} key={item.id}>
           <GridItem key={item.id} item={item} />
         </Grid2>
       ))}
