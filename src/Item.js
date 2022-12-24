@@ -1,7 +1,10 @@
 import "./Item.css";
+import { useParams } from 'react-router-dom';
 
 function Item() {
-  return <div className="Item"></div>;
+  const { itemId } = useParams();
+
+  return <div className="Item">{itemId}</div>;
 }
 
 export default Item;
