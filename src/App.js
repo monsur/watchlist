@@ -43,8 +43,8 @@ function App() {
           // using &= since all values need to be true to return true.
           if (typeof value === "object") {
             // if typeof is an object, assuming array.
-            for (const arrItem in value) {
-              if (arrItem.toLowerCase() === sourceValue) {
+            for (const i in value) {
+              if (value[i].toLowerCase() === sourceValue) {
                 hasItem &= true;
               }
             }
