@@ -1,0 +1,14 @@
+.brandText {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.collectionText {
+  margin-top: 10px;
+}
+
+.moneyText {
+  margin-top: 10px;
+}
