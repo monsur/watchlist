@@ -11,7 +11,7 @@ function GridItem(props) {
   const item = props.item;
   return (
     <div>
-      <a href={item.link}>
+      <a href={"#/item/" + item.id}>
         <img
           style={{ maxWidth: "50%" }}
           src={process.env.PUBLIC_URL + "/images/" + item.image}
