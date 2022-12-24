@@ -1,9 +1,4 @@
-const moneyFormatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
-});
+import Helpers from "./helpers.js";
 
 function Stats(props) {
   let total = 0;
@@ -12,7 +7,7 @@ function Stats(props) {
   }
 
   return (
-    <div style={{color: '#fff'}}>{moneyFormatter.format(total)}</div>
+    <div style={{color: '#fff'}}>{Helpers.formatMoney(total)}</div>
   );
 }
 
