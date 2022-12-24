@@ -12,7 +12,7 @@ function App() {
     };
   };
 
-  let getFilterFunction = function() {
+  let getFiltersFromQuery = function() {
     var filters = {};
  
     // Parse query parameters for any filters. Filters being with 'f:'.
@@ -22,18 +22,34 @@ function App() {
       }
     }
 
+    return filters;
+  };
+
+  let getFilterFunction = function() {
+    let filters = getFiltersFromQuery();
+
     // Check each item against each key in the filter. All filters must be true to
     // return true. If there are no filters, defaults to true.
     return function(filters) {return function(item) {
       var hasItem = true;
       for (const property in filters) {
+        let sourceValue = filters[property].toLowerCase();
         let value = item[property];
         if (!value) {
           // Item doesn't have this property, no need to continue checking.
           return false;
         }
         // using &= since all values need to be true to return true.
-        hasItem &= value.toLowerCase() === filters[property].toLowerCase();
+        if (typeof value === 'object') {
+          // if typeof is an object, assuming array.
+          for (const arrItem in value) {
+            if (arrItem.toLowerCase() === sourceValue) {
+              hasItem &= true;
+            }
+          }
+        } else {
+          hasItem &= value.toLowerCase() === sourceValue; 
+        }
       }
       return hasItem;
     }}(filters);
