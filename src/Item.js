@@ -24,6 +24,10 @@ function Item() {
   }
 
   const item = getItem();
+  let detail;
+  if (item.detail) {
+    detail = <div>{item.detail}</div>;
+  }
 
   return (
     <Box>
@@ -33,6 +37,7 @@ function Item() {
       <div>
         <div>{item.brand}</div>
         <div>{item.collection}</div>
+        {detail}
         <div>{Helpers.formatMoney(item.price)}</div>
         <div>
           <a href={item.link}>{getDomain(item.link)}</a>
