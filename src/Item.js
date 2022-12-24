@@ -11,10 +11,36 @@ function Item() {
     return data.find((element) => element.id == itemId);
   }
 
+  function getDomain(link) {
+    let hostname = (new URL(link)).hostname;
+    let hostnameFragments = hostname.split('.');
+    let domain = '';
+    for (let i = hostnameFragments.length - 1; i >= 0; i--) {
+      if (!domain) {
+        domain = hostnameFragments[i];
+      } else {
+        domain = hostnameFragments[i] + '.' + domain;
+        break;
+      }
+    }
+    return domain;
+  }
+
   const item = getItem();
+
   return (
     <Box>
+      <div>
       <img src={Helpers.getImageUrl(item.image)}></img>
+      </div>
+      <div>
+        <div>{item.brand}</div>
+        <div>{item.collection}</div>
+        <div>{Helpers.formatMoney(item.price)}</div>
+        <div><a href={item.link}>{getDomain(item.link)}</a></div>
+        <div>Diameter: {item.diameter}mm</div>
+        <div>Thickness: {item.thickness}mm</div>
+      </div>
     </Box>
   );
 }
