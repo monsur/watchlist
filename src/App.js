@@ -1,6 +1,7 @@
 import data from "./data.json";
 import "./App.css";
 import Grid from "./Grid";
+import Header from "./Header";
 import Stats from "./Stats";
 import { useSearchParams } from "react-router-dom";
 
@@ -62,6 +63,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Grid data={dataCopy} />
       <Stats data={dataCopy} />
     </div>
