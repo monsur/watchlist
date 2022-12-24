@@ -1,4 +1,5 @@
 import "./GridItem.css";
+import Helpers from "./helpers.js";
 
 const moneyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -14,7 +15,7 @@ function GridItem(props) {
       <a href={"#/item/" + item.id}>
         <img
           style={{ maxWidth: "50%" }}
-          src={process.env.PUBLIC_URL + "/images/" + item.image}
+          src={Helpers.getImageUrl(item.image)}
           alt={item.brand + " " + item.collection}
         />
       </a>
