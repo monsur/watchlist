@@ -12,15 +12,14 @@ function Item() {
   }
 
   function getDomain(link) {
-    let hostname = (new URL(link)).hostname;
-    let hostnameFragments = hostname.split('.');
-    let domain = '';
-    for (let i = hostnameFragments.length - 1; i >= 0; i--) {
+    let hostname = new URL(link).hostname;
+    let hostnameFragments = hostname.split(".");
+    let domain = "";
+    for (let i = 0; i < 2; i++) {
       if (!domain) {
-        domain = hostnameFragments[i];
+        domain = hostnameFragments.pop();
       } else {
-        domain = hostnameFragments[i] + '.' + domain;
-        break;
+        domain = hostnameFragments.pop() + "." + domain;
       }
     }
     return domain;
@@ -31,13 +30,15 @@ function Item() {
   return (
     <Box>
       <div>
-      <img src={Helpers.getImageUrl(item.image)}></img>
+        <img src={Helpers.getImageUrl(item.image)}></img>
       </div>
       <div>
         <div>{item.brand}</div>
         <div>{item.collection}</div>
         <div>{Helpers.formatMoney(item.price)}</div>
-        <div><a href={item.link}>{getDomain(item.link)}</a></div>
+        <div>
+          <a href={item.link}>{getDomain(item.link)}</a>
+        </div>
         <div>Diameter: {item.diameter}mm</div>
         <div>Thickness: {item.thickness}mm</div>
       </div>
