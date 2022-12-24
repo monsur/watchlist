@@ -12,15 +12,13 @@ function Item() {
   }
 
   function getDomain(link) {
-    let hostname = new URL(link).hostname;
-    let hostnameFragments = hostname.split(".");
+    let hostnameFragments = new URL(link).hostname.split(".");
     let domain = "";
     for (let i = 0; i < 2; i++) {
-      if (!domain) {
-        domain = hostnameFragments.pop();
-      } else {
-        domain = hostnameFragments.pop() + "." + domain;
+      if (domain) {
+        domain = "." + domain;
       }
+      domain = hostnameFragments.pop() + domain;
     }
     return domain;
   }
