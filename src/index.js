@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import Item from "./Item";
@@ -11,7 +11,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
@@ -22,10 +22,7 @@ const router = createBrowserRouter(
       path: "/item/:itemId",
       element: <Item />,
     },
-  ],
-  {
-    basename: process.env.PUBLIC_URL,
-  }
+  ]
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
