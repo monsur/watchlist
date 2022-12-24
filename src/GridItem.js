@@ -1,5 +1,3 @@
-import "./GridItem.css";
-
 const moneyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -12,14 +10,15 @@ function GridItem(props) {
   const itemName = item.brand + " " + item.collection;
 
   return (
-    <div className="GridItem">
+    <div>
       <a href={item.link}>
         <img
+          style={{ maxWidth: "50%" }}
           src={process.env.PUBLIC_URL + "/images/" + item.image}
           alt={itemName}
         />
       </a>
-      <div className="description">
+      <div>
         <div>{itemName}</div>
         <div>{moneyFormatter.format(item.price)}</div>
       </div>
