@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 function Header() {
   return (
-    <Box sx={{ flexGrow: 1, marginBottom: "20px" }}>
+    <Box sx={{ flexGrow: 1, marginBottom: "30px" }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -20,7 +20,7 @@ function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Monsur's Watch Wishlist
+            My Watch Wishlist
           </Typography>
         </Toolbar>
       </AppBar>
