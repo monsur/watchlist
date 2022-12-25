@@ -1,6 +1,6 @@
 import "./Item.css";
 import data from "./data.json";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Helpers from "./helpers.js";
 import AppBar from "@mui/material/AppBar";
@@ -11,6 +11,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function Item() {
   const { itemId } = useParams();
+  const navigate = useNavigate();
 
   function getItem() {
     return data.find((element) => element.id == itemId);
@@ -40,6 +41,7 @@ function Item() {
         <AppBar position="fixed">
           <Toolbar>
             <IconButton
+              onClick={() => navigate(-1)}
               size="large"
               edge="start"
               color="inherit"
