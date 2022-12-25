@@ -14,7 +14,7 @@ function Item() {
   const navigate = useNavigate();
 
   function getItem() {
-    return data.find((element) => element.id == itemId);
+    return data.find((element) => element.id === itemId);
   }
 
   function getDomain(link) {
@@ -57,7 +57,7 @@ function Item() {
         </AppBar>
       </Box>
       <div>
-        <img src={Helpers.getImageUrl(item.image)}></img>
+        <img src={Helpers.getImageUrl(item.image)} alt={item.brand + ' ' + item.collection}></img>
       </div>
       <div>
         <div>{item.brand}</div>
