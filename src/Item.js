@@ -8,6 +8,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Grid2 from "@mui/material/Unstable_Grid2";
 
 function Item() {
   const { itemId } = useParams();
@@ -56,20 +57,25 @@ function Item() {
           </Toolbar>
         </AppBar>
       </Box>
-      <div>
-        <img src={Helpers.getImageUrl(item.image)} alt={item.brand + ' ' + item.collection}></img>
-      </div>
-      <div>
-        <div>{item.brand}</div>
-        <div>{item.collection}</div>
-        {detail}
-        <div>{Helpers.formatMoney(item.price)}</div>
-        <div>
-          <a href={item.link}>{getDomain(item.link)}</a>
-        </div>
-        <div>Diameter: {item.diameter}mm</div>
-        <div>Thickness: {item.thickness}mm</div>
-      </div>
+      <Grid2 container spacing={2}>
+        <Grid2>
+          <img
+            src={Helpers.getImageUrl(item.image)}
+            alt={item.brand + " " + item.collection}
+          ></img>
+        </Grid2>
+        <Grid2>
+          <div>{item.brand}</div>
+          <div>{item.collection}</div>
+          {detail}
+          <div>{Helpers.formatMoney(item.price)}</div>
+          <div>
+            <a href={item.link}>{getDomain(item.link)}</a>
+          </div>
+          <div>Diameter: {item.diameter}mm</div>
+          <div>Thickness: {item.thickness}mm</div>
+        </Grid2>
+      </Grid2>
     </Box>
   );
 }
