@@ -38,7 +38,7 @@ function Item() {
 
   return (
     <Box className="Item">
-      <Box sx={{ flexGrow: 1, marginBottom: "100px" }}>
+      <Box sx={{ marginBottom: "100px" }}>
         <AppBar position="fixed">
           <Toolbar>
             <IconButton
