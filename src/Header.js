@@ -5,7 +5,10 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-function Header() {
+function Header(props) {
+  // This will have to do until I learn how to pass components in.
+  let showItem = props.showItem || false;
+
   return (
     <Box sx={{ marginBottom: "100px" }}>
       <AppBar position="fixed">
