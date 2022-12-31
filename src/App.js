@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header title={data.title} />
       <Grid data={dataCopy} />
       <Stats data={dataCopy} />
     </div>
