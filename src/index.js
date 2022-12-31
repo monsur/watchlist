@@ -13,12 +13,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-const loadData = async ({ params }) => {
-  let source = "data";
-  if (params.source) {
-    source = params.source;
-  }
-  return fetch(`${process.env.PUBLIC_URL}/${source}.json`);
+const loadData = async () => {
+  return fetch(`${process.env.PUBLIC_URL}/data.json`);
 };
 
 const router = createHashRouter([
