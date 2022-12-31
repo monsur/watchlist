@@ -13,22 +13,25 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+const loadData = async ({ params }) => {
+  let source = 'data';
+  if (params.source) {
+    source = params.source;
+  }
+  return fetch(`${process.env.PUBLIC_URL}/${source}.json`);
+};
+
 const router = createHashRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    loader: async ({ params }) => {
-      let source = 'data';
-      if (params.source) {
-        source = params.source;
-      }
-      return fetch(`${process.env.PUBLIC_URL}/${source}.json`);
-    }
+    loader: loadData,
   },
   {
     path: "/item/:itemId",
     element: <Item />,
+    loader: loadData,
   },
 ]);
 

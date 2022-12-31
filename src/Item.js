@@ -1,6 +1,5 @@
 import "./Item.css";
-import data from "./data.json";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLoaderData } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Helpers from "./helpers.js";
 import AppBar from "@mui/material/AppBar";
@@ -13,9 +12,10 @@ import Grid2 from "@mui/material/Unstable_Grid2";
 function Item() {
   const { itemId } = useParams();
   const navigate = useNavigate();
+  const data = useLoaderData();
 
   function getItem() {
-    return data.find((element) => element.id === itemId);
+    return data.watches.find((element) => element.id === itemId);
   }
 
   function getDomain(link) {
@@ -52,7 +52,7 @@ function Item() {
               <ArrowBackIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              My Watch Wishlist
+              {data.title}
             </Typography>
           </Toolbar>
         </AppBar>

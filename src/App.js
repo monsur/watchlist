@@ -5,8 +5,8 @@ import Stats from "./Stats";
 import { useSearchParams, useLoaderData } from "react-router-dom";
 
 function App() {
-  let [searchParams] = useSearchParams();
-  let data = useLoaderData();
+  const [searchParams] = useSearchParams();
+  const data = useLoaderData();
 
   let getSortFunction = function () {
     return function (a, b) {
