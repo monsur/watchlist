@@ -1,12 +1,12 @@
-import data from "./data.json";
 import "./App.css";
 import Grid from "./Grid";
 import Header from "./Header";
 import Stats from "./Stats";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useLoaderData } from "react-router-dom";
 
 function App() {
   let [searchParams] = useSearchParams();
+  let data = useLoaderData();
 
   let getSortFunction = function () {
     return function (a, b) {

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import data from "./data.json";
+import data from "../public/data.json";
 
 test('Each item has a unique id', () => {
   let ids = {};

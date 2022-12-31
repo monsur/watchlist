@@ -18,6 +18,13 @@ const router = createHashRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+    loader: async ({ params }) => {
+      let source = 'data';
+      if (params.source) {
+        source = params.source;
+      }
+      return fetch(`${process.env.PUBLIC_URL}/${source}.json`);
+    }
   },
   {
     path: "/item/:itemId",
