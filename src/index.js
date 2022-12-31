@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import App from "./App";
-import Item from "./Item";
-import ErrorPage from "./error-page";
 import reportWebVitals from "./reportWebVitals";
+import Router from "./Router";
 
 import "@fontsource/prompt/500.css";
 import "@fontsource/roboto/300.css";
@@ -13,28 +10,10 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-const loadData = async () => {
-  return fetch(`${process.env.PUBLIC_URL}/data.json`);
-};
-
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    loader: loadData,
-  },
-  {
-    path: "/item/:itemId",
-    element: <Item />,
-    loader: loadData,
-  },
-]);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router />
   </React.StrictMode>
 );
 
