@@ -69,7 +69,9 @@ function App() {
     })(filters);
   };
 
-  var dataCopy = data.watches.filter(getFilterFunction()).sort(getSortFunction());
+  var dataCopy = data.watches
+    .filter(getFilterFunction())
+    .sort(getSortFunction());
 
   return (
     <div className="App">
