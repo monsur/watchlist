@@ -6,7 +6,7 @@ test('Each item has a unique id', () => {
   for (const i in data) {
     let id = data[i].id;
     expect(id).not.toBeUndefined();
-    expect(ids).not.toContain(id);
+    expect(ids).not.toHaveProperty(id);
     ids[id] = true;
   }
 });
@@ -24,5 +24,18 @@ test('Each item has a valid type', () => {
   let validTypes = ["calendar", "chronograph", "dive", "dress", "field", "pilot", "sport", "travel"];
   for (const i in data) {
     expect(validTypes).toContain(data[i].type);
+  }
+});
+
+test('Each item has a valid rank', () => {
+  let ranks = {};
+  for (const i in data) {
+    let item = data[i];
+    if (item.hasOwnProperty("rank")) {
+      let rank = item.rank;
+      expect(rank).toBeGreaterThan(0);
+      expect(ranks).not.toHaveProperty(rank.toString());
+      ranks[rank.toString()] = true;
+    }
   }
 });
