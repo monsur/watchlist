@@ -7,14 +7,14 @@ import Item from "./Item";
 import ErrorPage from "./error-page";
 import reportWebVitals from "./reportWebVitals";
 
-import '@fontsource/prompt/500.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import "@fontsource/prompt/500.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 const loadData = async ({ params }) => {
-  let source = 'data';
+  let source = "data";
   if (params.source) {
     source = params.source;
   }
