@@ -1,14 +1,15 @@
 .brandText {
-  font-weight: bold;
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
   margin-top: 10px;
-  letter-spacing: 2px;
+  color:#111;
 }
 
 .collectionText {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .moneyText {
-  margin-top: 10px;
+  margin-top: 8px;
 }
