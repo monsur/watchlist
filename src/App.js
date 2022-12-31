@@ -10,7 +10,17 @@ function App() {
 
   let getSortFunction = function () {
     return function (a, b) {
-      return parseFloat(a.price) - parseFloat(b.price);
+      let aHasRank = a.hasOwnProperty("rank");
+      let bHasRank = b.hasOwnProperty("rank");
+      if (aHasRank && !bHasRank) {
+        return -1;
+      } else if (!aHasRank && bHasRank) {
+        return 1;
+      } else if (!aHasRank && !bHasRank) {
+        return parseFloat(a.price) - parseFloat(b.price);
+      } else {
+        return a.rank - b.rank;
+      }
     };
   };
 
