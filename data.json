@@ -630,6 +630,22 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather"
+    },
+    {
+      "id": "bulpar01",
+      "brand": "Bulova",
+      "collection": "Archive",
+      "detail": "Parking Meter",
+      "type": "sport",
+      "image": "parkingmeter.jpg",
+      "link": "https://www.bulova.com/us/en/product/98B390.html",
+      "price": 595,
+      "ref": "98B390",
+      "movement": "0S21",
+      "diameter": 43,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["orange"]
     }
   ]
 }
