@@ -1,5 +1,3 @@
-import { AnyMxRecord } from "dns";
-
 export default class Filter {
   key: string;
   vals: string[];
