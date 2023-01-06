@@ -24,3 +24,8 @@ test("filter values match (multiple values)", () => {
   const filter = new Filter("foo", ["baz", "foo"]);
   expect(filter.match({"foo": "foo"})).toBeTruthy();
 })
+
+test("filter values match (mixed case)", () => {
+  const filter = new Filter("foo", ["FOO"]);
+  expect(filter.match({"foo": "foo"})).toBeTruthy();
+})

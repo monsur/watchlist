@@ -15,7 +15,7 @@ export default class Filter {
     let isMatch = false;
     let itemVal = item[this.key].toString();
     this.vals.forEach((val, i) => {
-      if (itemVal.toString() === val.toString()) {
+      if (itemVal.toString().toLowerCase() === val.toString().toLowerCase()) {
         isMatch = true;
       }
     });
