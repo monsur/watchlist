@@ -18,7 +18,7 @@ function Item() {
   function getItem() : WatchData {
     let item = data.watches.find((element) => element.id === itemId);
     if (!item) {
-      throw new Error("No watch found with ID " + itemId);
+      throw new Error(`No watch found with ID ${itemId}`);
     }
     return item;
   }

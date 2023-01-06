@@ -9,8 +9,8 @@ function App() {
   const [searchParams] = useSearchParams();
   const data = useLoaderData() as PageData;
 
-  let getSortFunction = function () {
-    return function (a: WatchData, b: WatchData) {
+  const getSortFunction = () =>
+    function (a: WatchData, b: WatchData) {
       let aHasRank = a.hasOwnProperty("rank");
       let bHasRank = b.hasOwnProperty("rank");
       if (aHasRank && !bHasRank) {
@@ -23,9 +23,8 @@ function App() {
         return a.rank - b.rank;
       }
     };
-  };
 
-  let getFiltersFromQuery = function () {
+  const getFiltersFromQuery = () => {
     var filters: {
       [key: string]: string;
     } = {};
@@ -40,13 +39,13 @@ function App() {
     return filters;
   };
 
-  let getFilterFunction = function () {
+  const getFilterFunction = () => {
     let filters = getFiltersFromQuery();
 
     // Check each item against each key in the filter. All filters must be true to
     // return true. If there are no filters, defaults to true.
     return (function (filters) {
-      return function (item : any) {
+      return function (item: any) {
         var hasItem = true;
         for (const property in filters) {
           let sourceValue = filters[property].toLowerCase();
@@ -64,7 +63,7 @@ function App() {
               }
             }
           } else {
-            hasItem = hasItem && (value.toLowerCase() === sourceValue);
+            hasItem = hasItem && value.toLowerCase() === sourceValue;
           }
         }
         return hasItem;

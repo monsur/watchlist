@@ -2,7 +2,7 @@ import GridItem from "./GridItem";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import { WatchData } from "./Types";
 
-function Grid(props: {data: WatchData[]}) {
+function Grid(props: { data: WatchData[] }) {
   return (
     <Grid2 container spacing={2}>
       {props.data.map((item) => (

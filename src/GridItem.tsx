@@ -2,7 +2,7 @@ import "./GridItem.css";
 import Helpers from "./Helpers";
 import { WatchData } from "./Types";
 
-function GridItem(props: {item: WatchData}) {
+function GridItem(props: { item: WatchData }) {
   const item = props.item;
   return (
     <div>
