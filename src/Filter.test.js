@@ -29,3 +29,8 @@ test("filter values match (mixed case)", () => {
   const filter = new Filter("foo", ["FOO"]);
   expect(filter.match({"foo": "foo"})).toBeTruthy();
 })
+
+test("filter array match (mixed case)", () => {
+  const filter = new Filter("color", ["orange"]);
+  expect(filter.match({"color": ["oRange"]})).toBeTruthy();
+})
