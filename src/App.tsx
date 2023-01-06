@@ -3,7 +3,7 @@ import Grid from "./Grid";
 import Header from "./Header";
 import Stats from "./Stats";
 import { useSearchParams, useLoaderData } from "react-router-dom";
-import { PageData, WatchData } from "./Types";
+import { PageData } from "./Types";
 import Filters from "./Filters";
 
 function App() {
