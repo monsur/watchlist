@@ -1,4 +1,6 @@
-export default class Filter {
+import { Filter } from "./Types";
+
+export default class FilterString implements Filter {
   key: string;
   vals: string[];
 

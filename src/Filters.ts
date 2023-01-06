@@ -1,4 +1,5 @@
-import Filter from "./Filter";
+import FilterString from "./FilterString";
+import { Filter } from "./Types";
 
 export default class Filters {
   _filters: Filter[];
@@ -36,7 +37,7 @@ export default class Filters {
       return null;
     }
 
-    return new Filter(filterKey, val.split(","));
+    return new FilterString(filterKey, val.split(","));
   }
 
   getFilters() : Filter[] {

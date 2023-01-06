@@ -1,4 +1,6 @@
-export default class Filter {
+import { Filter } from "./Types";
+
+export default class FilterPrice implements Filter {
   low: number;
   high: number;
 

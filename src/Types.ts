@@ -23,3 +23,7 @@ export interface PageData {
   title: string;
   watches: WatchData[];
 }
+
+export interface Filter {
+  match(item: any): boolean;
+}
