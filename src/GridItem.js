@@ -1,5 +1,5 @@
 import "./GridItem.css";
-import Helpers from "./helpers.js";
+import Helpers from "./Helpers.js";
 
 function GridItem(props) {
   const item = props.item;

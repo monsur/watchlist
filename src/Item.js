@@ -1,7 +1,7 @@
 import "./Item.css";
 import { useParams, useNavigate, useLoaderData } from "react-router-dom";
 import Box from "@mui/material/Box";
-import Helpers from "./helpers.js";
+import Helpers from "./Helpers.js";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
