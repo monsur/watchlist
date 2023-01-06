@@ -426,6 +426,7 @@
       "price": 4495,
       "ref": "FC-718NWWM4H6",
       "movement": "FC-718",
+      "frequency": 28800,
       "diameter": 42,
       "thickness": 12.1,
       "water_resistance": 50,

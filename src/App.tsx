@@ -10,8 +10,27 @@ function App() {
   const [searchParams] = useSearchParams();
   const data = useLoaderData() as PageData;
 
+  let sortFields = ["rank", "price"];
+  let sortParam = searchParams.get("sort")
+  if (sortParam != null) {
+    sortFields = sortParam.split(",");
+  }
+
   const getSortFunction = () => {
-    return sortByKey("rank");
+    const sortFunctions: ((a: any, b: any) => number)[] = [];
+    sortFields.forEach((field, i) => {
+      sortFunctions.push(sortByKey(field));
+    })
+
+    return function(a: any, b: any) {
+      for (let i = 0; i < sortFunctions.length; i++) {
+        let c = sortFunctions[i](a, b);
+        if (c !== 0) {
+          return c;
+        }
+      }
+      return 0;    
+    }
   }
 
   const sortByKey = (key: string) => {
