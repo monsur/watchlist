@@ -8,7 +8,7 @@ import Filters from "./Filters";
 import Sorter from "./Sorter";
 
 // Sort/Filter syntax
-// Example: https://localhost/watchlist/#/?f:brand=rolex&sort=price
+// Example: https://localhost/watchlist/#/?f:brand=rolex&sort=price|desc
 //
 // Filtering syntax: f:<field>=<value1>,<value2>
 // "field" matches a field in WatchData
@@ -21,11 +21,10 @@ import Sorter from "./Sorter";
 // In the case of multiple filters, ALL filters must match.
 // e.g. "f:brand=rolex&f:color=orange" will match ONLY gold rolex.
 // 
-// Sorting syntax: sort=<field1>,<field2>
+// Sorting syntax: sort=<field1>|<asc/desc>,<field2>|<asc/desc>
 // Fields are in precdence order.
 // e.g field1 will be sorted before field2.
-//
-// TODO: Support asc/desc sorts.
+// Defaults to "asc" sort, can be changed by adding "|desc" to the sort param.
 
 function App() {
   const [searchParams] = useSearchParams();
