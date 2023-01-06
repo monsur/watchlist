@@ -46,4 +46,16 @@ export default class Filters {
   exists() : boolean {
     return this._filters.length > 0;
   }
+
+  match(item: any) : boolean {
+    if (!this.exists()) {
+      return false;
+    }
+
+    let isMatch = false;
+    this._filters.forEach((filter, i) => {
+      isMatch = isMatch || filter.match(item);
+    });
+    return isMatch;
+  }
 }

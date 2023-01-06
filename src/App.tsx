@@ -28,37 +28,14 @@ function App() {
   const getFilterFunction = () => {
     const filters = new Filters(searchParams);
     if (!filters.exists()) {
-      return () => false;
+      return () => true;
     }
-    return () => true;
-    /*
-    // Check each item against each key in the filter. All filters must be true to
-    // return true. If there are no filters, defaults to true.
+
     return (function (filters) {
       return function (item: any) {
-        var hasItem = true;
-        for (const property in filters) {
-          let sourceValue = filters[property].toLowerCase();
-          let value = item[property];
-          if (!value) {
-            // Item doesn't have this property, no need to continue checking.
-            return false;
-          }
-          // using &= since all values need to be true to return true.
-          if (typeof value === "object") {
-            // if typeof is an object, assuming array.
-            for (const i in value) {
-              if (value[i].toLowerCase() === sourceValue) {
-                hasItem = hasItem && true;
-              }
-            }
-          } else {
-            hasItem = hasItem && value.toLowerCase() === sourceValue;
-          }
-        }
-        return hasItem;
+        return filters.match(item);
       };
-    })(filters); */
+    })(filters);
   };
 
   var dataCopy = data.watches
