@@ -5,6 +5,7 @@ import Stats from "./Stats";
 import { useSearchParams, useLoaderData } from "react-router-dom";
 import { PageData } from "./Types";
 import Filters from "./Filters";
+import Sorter from "./Sorter";
 
 // Sort/Filter syntax
 // Example: https://localhost/watchlist/#/?f:brand=rolex&sort=price
@@ -37,14 +38,14 @@ function App() {
   }
 
   const getSortFunction = () => {
-    const sortFunctions: ((a: any, b: any) => number)[] = [];
+    const sorters: Sorter[] = [];
     sortFields.forEach((field, i) => {
-      sortFunctions.push(sortByKey(field));
+      sorters.push(new Sorter(field));
     })
 
     return function(a: any, b: any) {
-      for (let i = 0; i < sortFunctions.length; i++) {
-        let c = sortFunctions[i](a, b);
+      for (let i = 0; i < sorters.length; i++) {
+        let c = sorters[i].sort(a, b);
         if (c !== 0) {
           return c;
         }
