@@ -1,6 +1,9 @@
-import Helpers from "./Helpers.ts";
+import Helpers from "./Helpers";
+import { WatchData } from "./Types";
 
-function Stats(props) {
+function Stats(props: {
+  data: WatchData[]
+}) {
   let total = 0;
   for (let i in props.data) {
     total += props.data[i].price;
