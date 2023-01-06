@@ -1,19 +1,11 @@
-export class Filter {
-  key: string;
-  vals: string[];
+import Filter from "./Filter";
 
-  constructor(newKey: string, newVals: string[]) {
-    this.key = newKey;
-    this.vals = newVals;
-  }
-}
-
-export class Filters {
-  filters: Filter[];
+export default class Filters {
+  _filters: Filter[];
 
   constructor(searchParams: URLSearchParams) {
-    this.filters = [];
-    Filters.parseFilters(searchParams, this.filters);
+    this._filters = [];
+    Filters.parseFilters(searchParams, this._filters);
   }
 
   static parseFilters(searchParams: URLSearchParams, filters: Filter[]) {
@@ -47,7 +39,11 @@ export class Filters {
     return new Filter(filterKey, val.split(","));
   }
 
+  getFilters() : Filter[] {
+    return this._filters;
+  }
+
   exists() : boolean {
-    return this.filters.length > 0;
+    return this._filters.length > 0;
   }
 }

@@ -4,7 +4,7 @@ import Header from "./Header";
 import Stats from "./Stats";
 import { useSearchParams, useLoaderData } from "react-router-dom";
 import { PageData, WatchData } from "./Types";
-import { Filters } from "./Filters";
+import Filters from "./Filters";
 
 function App() {
   const [searchParams] = useSearchParams();
