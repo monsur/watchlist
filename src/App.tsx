@@ -3,13 +3,14 @@ import Grid from "./Grid";
 import Header from "./Header";
 import Stats from "./Stats";
 import { useSearchParams, useLoaderData } from "react-router-dom";
+import { PageData, WatchData } from "./Types";
 
 function App() {
   const [searchParams] = useSearchParams();
-  const data = useLoaderData();
+  const data = useLoaderData() as PageData;
 
   let getSortFunction = function () {
-    return function (a, b) {
+    return function (a: WatchData, b: WatchData) {
       let aHasRank = a.hasOwnProperty("rank");
       let bHasRank = b.hasOwnProperty("rank");
       if (aHasRank && !bHasRank) {
@@ -17,7 +18,7 @@ function App() {
       } else if (!aHasRank && bHasRank) {
         return 1;
       } else if (!aHasRank && !bHasRank) {
-        return parseFloat(a.price) - parseFloat(b.price);
+        return a.price - b.price;
       } else {
         return a.rank - b.rank;
       }
@@ -25,14 +26,16 @@ function App() {
   };
 
   let getFiltersFromQuery = function () {
-    var filters = {};
+    var filters: {
+      [key: string]: string;
+    } = {};
 
     // Parse query parameters for any filters. Filters being with 'f:'.
-    for (const [key, value] of searchParams.entries()) {
+    Object.entries(searchParams).forEach(([key, value]) => {
       if (key.startsWith("f:")) {
         filters[key.substring(2)] = value;
       }
-    }
+    });
 
     return filters;
   };
@@ -43,7 +46,7 @@ function App() {
     // Check each item against each key in the filter. All filters must be true to
     // return true. If there are no filters, defaults to true.
     return (function (filters) {
-      return function (item) {
+      return function (item : any) {
         var hasItem = true;
         for (const property in filters) {
           let sourceValue = filters[property].toLowerCase();
@@ -57,11 +60,11 @@ function App() {
             // if typeof is an object, assuming array.
             for (const i in value) {
               if (value[i].toLowerCase() === sourceValue) {
-                hasItem &= true;
+                hasItem = hasItem && true;
               }
             }
           } else {
-            hasItem &= value.toLowerCase() === sourceValue;
+            hasItem = hasItem && (value.toLowerCase() === sourceValue);
           }
         }
         return hasItem;

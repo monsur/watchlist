@@ -1,7 +1,8 @@
 import "./GridItem.css";
-import Helpers from "./Helpers.ts";
+import Helpers from "./Helpers";
+import { WatchData } from "./Types";
 
-function GridItem(props) {
+function GridItem(props: {item: WatchData}) {
   const item = props.item;
   return (
     <div>

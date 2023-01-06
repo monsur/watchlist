@@ -1,11 +1,10 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Item from "./Item";
-import ErrorPage from "./error-page";
 
 function Router() {
-  const loadData = async ({ request }) => {
-    const url = new URL(request.url);
+  const loadData = async (requestUrl: string) => {
+    const url = new URL(requestUrl);
     const source = url.searchParams.get("source") || "data";
     return fetch(`${process.env.PUBLIC_URL}/${source}.json`);
   };
@@ -14,13 +13,16 @@ function Router() {
     {
       path: "/",
       element: <App />,
-      errorElement: <ErrorPage />,
-      loader: loadData,
+      loader: async ({ request }) => {
+        return loadData(request.url);
+      },
     },
     {
       path: "/item/:itemId",
       element: <Item />,
-      loader: loadData,
+      loader: async ({ request }) => {
+        return loadData(request.url);
+      },
     },
   ]);
 

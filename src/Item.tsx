@@ -1,24 +1,29 @@
 import "./Item.css";
 import { useParams, useNavigate, useLoaderData } from "react-router-dom";
 import Box from "@mui/material/Box";
-import Helpers from "./Helpers.ts";
+import Helpers from "./Helpers";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Grid2 from "@mui/material/Unstable_Grid2";
+import { PageData, WatchData } from "./Types";
 
 function Item() {
   const { itemId } = useParams();
   const navigate = useNavigate();
-  const data = useLoaderData();
+  const data = useLoaderData() as PageData;
 
-  function getItem() {
-    return data.watches.find((element) => element.id === itemId);
+  function getItem() : WatchData {
+    let item = data.watches.find((element) => element.id === itemId);
+    if (!item) {
+      throw new Error("No watch found with ID " + itemId);
+    }
+    return item;
   }
 
-  function getDomain(link) {
+  function getDomain(link: string) : string {
     let hostnameFragments = new URL(link).hostname.split(".");
     let domain = "";
     for (let i = 0; i < 2; i++) {

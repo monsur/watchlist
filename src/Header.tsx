@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-function Header(props) {
+function Header(props: { title: string; showItem?: boolean }) {
   // This will have to do until I learn how to pass components in.
   let showItem = props.showItem || false;
 

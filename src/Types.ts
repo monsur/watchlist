@@ -1,5 +1,6 @@
 export interface WatchData {
   id: string;
+  rank: number;
   brand: string;
   collection: string;
   detail: string;
@@ -16,4 +17,9 @@ export interface WatchData {
   crystal: string;
   strap: string;
   color: string[];
+}
+
+export interface PageData {
+  title: string;
+  watches: WatchData[];
 }
