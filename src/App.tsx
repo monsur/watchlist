@@ -23,6 +23,8 @@ import Filters from "./Filters";
 // Sorting syntax: sort=<field1>,<field2>
 // Fields are in precdence order.
 // e.g field1 will be sorted before field2.
+//
+// TODO: Support asc/desc sorts.
 
 function App() {
   const [searchParams] = useSearchParams();
