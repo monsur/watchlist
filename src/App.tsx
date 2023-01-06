@@ -6,6 +6,24 @@ import { useSearchParams, useLoaderData } from "react-router-dom";
 import { PageData } from "./Types";
 import Filters from "./Filters";
 
+// Sort/Filter syntax
+// Example: https://localhost/watchlist/#/?f:brand=rolex&sort=price
+//
+// Filtering syntax: f:<field>=<value1>,<value2>
+// "field" matches a field in WatchData
+// "value1,value2" matches one more more values for field.
+//
+// if any one value is valid, its considered a match.
+// e.g. "f:color=orange,gold" will match "orange" OR "gold".
+//
+// Multiple filters can be specified.
+// In the case of multiple filters, ALL filters must match.
+// e.g. "f:brand=rolex&f:color=orange" will match ONLY gold rolex.
+// 
+// Sorting syntax: sort=<field1>,<field2>
+// Fields are in precdence order.
+// e.g field1 will be sorted before field2.
+
 function App() {
   const [searchParams] = useSearchParams();
   const data = useLoaderData() as PageData;
