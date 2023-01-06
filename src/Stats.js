@@ -1,4 +1,4 @@
-import Helpers from "./Helpers.js";
+import Helpers from "./Helpers.ts";
 
 function Stats(props) {
   let total = 0;
