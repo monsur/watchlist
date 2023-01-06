@@ -1,3 +1,4 @@
+import FilterPrice from "./FilterPrice";
 import FilterString from "./FilterString";
 import { Filter } from "./Types";
 
@@ -35,6 +36,10 @@ export default class Filters {
     let filterKey = key.substring(2);
     if (!filterKey) {
       return null;
+    }
+
+    if (filterKey === "price") {
+      return new FilterPrice(val);
     }
 
     return new FilterString(filterKey, val.split(","));

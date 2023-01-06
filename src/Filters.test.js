@@ -120,3 +120,11 @@ test("Matches multiple filters", () => {
   let filters = new Filters(searchParams);
   expect(filters.match({"foo": "bar", "brand": "rolex"})).toBeTruthy();
 })
+
+test("Matches multiple filters (with price)", () => {
+  let searchParams = new URLSearchParams();
+  searchParams.set("f:price", "1000");
+  searchParams.set("f:brand", "rolex");
+  let filters = new Filters(searchParams);
+  expect(filters.match({"price": 1001, "brand": "rolex"})).toBeTruthy();
+})
