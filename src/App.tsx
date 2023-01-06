@@ -44,7 +44,7 @@ function App() {
       } else if (!aHasKey && !bHasKey) {
         return 0;
       } else {
-        return a[key]- b[key];
+        return a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0;
       }
     };
   };
