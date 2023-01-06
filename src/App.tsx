@@ -53,22 +53,6 @@ function App() {
     }
   }
 
-  const sortByKey = (key: string) => {
-    return function (a: any, b: any) {
-      let aHasKey = a.hasOwnProperty(key);
-      let bHasKey = b.hasOwnProperty(key);
-      if (aHasKey && !bHasKey) {
-        return -1;
-      } else if (!aHasKey && bHasKey) {
-        return 1;
-      } else if (!aHasKey && !bHasKey) {
-        return 0;
-      } else {
-        return a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0;
-      }
-    };
-  };
-
   const getFilterFunction = () => {
     const filters = new Filters(searchParams);
     if (!filters.exists()) {

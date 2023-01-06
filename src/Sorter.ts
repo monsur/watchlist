@@ -8,7 +8,7 @@ export default class Sorter {
     this.field = inputArr[0];
     this.lessThan = -1;
     this.greaterThan = 1;
-    if (inputArr.length > 1 && inputArr[1] == "desc") {
+    if (inputArr.length > 1 && inputArr[1] === "desc") {
       this.lessThan = 1;
       this.greaterThan = -1;
     }
