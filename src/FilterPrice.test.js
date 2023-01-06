@@ -30,3 +30,14 @@ test("Price match (range, high)", () => {
   expect(filter.match({"price": 200})).toBeTruthy();
 })
 
+test("Invalid low price", () => {
+  expect(() => new FilterPrice("foo")).toThrow();
+})
+
+test("Invalid high price", () => {
+  expect(() => new FilterPrice("0-foo")).toThrow();
+})
+
+test("Invalid range", () => {
+  expect(() => new FilterPrice("100-1")).toThrow();
+})

@@ -6,8 +6,26 @@ export default class FilterPrice implements Filter {
 
   constructor(input: string) {
     let inputArr = input.split("-");
-    this.low = parseFloat(inputArr[0]);
-    this.high = inputArr.length > 1 ? parseFloat(inputArr[1]) : 1000000;
+
+    let low = parseFloat(inputArr[0]);
+    if (isNaN(low)) {
+      throw new Error(`Price "${inputArr[0]}" is not a number`);
+    }
+    this.low = low;
+
+    if (inputArr.length === 1) {
+      this.high = 1000000;
+      return;
+    }
+
+    let high = parseFloat(inputArr[1]);
+    if (isNaN(high)) {
+      throw new Error(`Price "${inputArr[1]}" is not a number`);
+    }
+    if (high < low) {
+      throw new Error(`Price "${high}" is less than "${low}"`);
+    }
+    this.high = high;
   }
 
   match(item: any) {
