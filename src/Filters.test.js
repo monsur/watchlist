@@ -105,10 +105,18 @@ test("Match one filter, multiple values", () => {
   expect(filters.match({"foo": "bar"})).toBeTruthy();
 })
 
-test("Match multiple filters", () => {
+test("Misses multiple filters", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar, baz");
   searchParams.set("f:rolex", "bar");
   let filters = new Filters(searchParams);
-  expect(filters.match({"foo": "bar"})).toBeTruthy();
+  expect(filters.match({"foo": "bar"})).toBeFalsy();
+})
+
+test("Matches multiple filters", () => {
+  let searchParams = new URLSearchParams();
+  searchParams.set("f:foo", "bar, baz");
+  searchParams.set("f:brand", "rolex");
+  let filters = new Filters(searchParams);
+  expect(filters.match({"foo": "bar", "brand": "rolex"})).toBeTruthy();
 })

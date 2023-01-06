@@ -52,9 +52,9 @@ export default class Filters {
       return false;
     }
 
-    let isMatch = false;
+    let isMatch = true;
     this._filters.forEach((filter, i) => {
-      isMatch = isMatch || filter.match(item);
+      isMatch = isMatch && filter.match(item);
     });
     return isMatch;
   }
