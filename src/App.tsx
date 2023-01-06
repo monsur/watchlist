@@ -4,6 +4,7 @@ import Header from "./Header";
 import Stats from "./Stats";
 import { useSearchParams, useLoaderData } from "react-router-dom";
 import { PageData, WatchData } from "./Types";
+import { Filters } from "./Filters";
 
 function App() {
   const [searchParams] = useSearchParams();
@@ -24,24 +25,13 @@ function App() {
       }
     };
 
-  const getFiltersFromQuery = () => {
-    var filters: {
-      [key: string]: string;
-    } = {};
-
-    // Parse query parameters for any filters. Filters being with 'f:'.
-    Object.entries(searchParams).forEach(([key, value]) => {
-      if (key.startsWith("f:")) {
-        filters[key.substring(2)] = value;
-      }
-    });
-
-    return filters;
-  };
-
   const getFilterFunction = () => {
-    let filters = getFiltersFromQuery();
-
+    const filters = new Filters(searchParams);
+    if (!filters.exists()) {
+      return () => false;
+    }
+    return () => true;
+    /*
     // Check each item against each key in the filter. All filters must be true to
     // return true. If there are no filters, defaults to true.
     return (function (filters) {
@@ -68,7 +58,7 @@ function App() {
         }
         return hasItem;
       };
-    })(filters);
+    })(filters); */
   };
 
   var dataCopy = data.watches
