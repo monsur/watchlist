@@ -10,20 +10,25 @@ function App() {
   const [searchParams] = useSearchParams();
   const data = useLoaderData() as PageData;
 
-  const getSortFunction = () =>
-    function (a: WatchData, b: WatchData) {
-      let aHasRank = a.hasOwnProperty("rank");
-      let bHasRank = b.hasOwnProperty("rank");
-      if (aHasRank && !bHasRank) {
+  const getSortFunction = () => {
+    return sortByKey("rank");
+  }
+
+  const sortByKey = (key: string) => {
+    return function (a: any, b: any) {
+      let aHasKey = a.hasOwnProperty(key);
+      let bHasKey = b.hasOwnProperty(key);
+      if (aHasKey && !bHasKey) {
         return -1;
-      } else if (!aHasRank && bHasRank) {
+      } else if (!aHasKey && bHasKey) {
         return 1;
-      } else if (!aHasRank && !bHasRank) {
-        return a.price - b.price;
+      } else if (!aHasKey && !bHasKey) {
+        return 0;
       } else {
-        return a.rank - b.rank;
+        return a[key]- b[key];
       }
     };
+  };
 
   const getFilterFunction = () => {
     const filters = new Filters(searchParams);
