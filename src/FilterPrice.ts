@@ -4,8 +4,8 @@ export default class FilterPrice implements Filter {
   low: number;
   high: number;
 
-  static createNew(input: string) {
-    return new FilterPrice(input);
+  static createNew(newKey: string, newVal: string) {
+    return new FilterPrice(newVal);
   }
 
   constructor(input: string) {

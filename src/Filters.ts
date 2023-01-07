@@ -39,7 +39,7 @@ export default class Filters {
     }
 
     if (filterKey === "price") {
-      return FilterPrice.createNew(val);
+      return FilterPrice.createNew(filterKey, val);
     }
 
     return FilterString.createNew(filterKey, val);
