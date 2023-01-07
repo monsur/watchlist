@@ -4,13 +4,13 @@ export default class FilterString implements Filter {
   key: string;
   vals: string[];
 
-  static createNew(newKey: string, newVals: string[]) {
-    return new FilterString(newKey, newVals);
+  static createNew(newKey: string, newVal: string) {
+    return new FilterString(newKey, newVal);
   }
 
-  constructor(newKey: string, newVals: string[]) {
+  constructor(newKey: string, newVal: string) {
     this.key = newKey;
-    this.vals = newVals;
+    this.vals = newVal.split(",");
   }
 
   private compare(a: any, b: any) {

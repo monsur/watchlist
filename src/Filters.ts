@@ -42,7 +42,7 @@ export default class Filters {
       return FilterPrice.createNew(val);
     }
 
-    return FilterString.createNew(filterKey, val.split(","));
+    return FilterString.createNew(filterKey, val);
   }
 
   getFilters() : Filter[] {
