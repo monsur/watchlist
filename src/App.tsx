@@ -6,6 +6,7 @@ import { useSearchParams, useLoaderData } from "react-router-dom";
 import { PageData } from "./Types";
 import Filters from "./Filters";
 import Sorter from "./Sorter";
+import FilterOptions from "./FilterOptions";
 
 // Sort/Filter syntax
 // Example: https://localhost/watchlist/#/?f:brand=rolex&sort=price|desc
@@ -29,6 +30,7 @@ import Sorter from "./Sorter";
 function App() {
   const [searchParams] = useSearchParams();
   const data = useLoaderData() as PageData;
+  const filterOptions = new FilterOptions(data);
 
   let sortFields = ["rank", "price"];
   let sortParam = searchParams.get("sort")
@@ -72,7 +74,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title={data.title} />
+      <Header title={data.title} filterOptions={filterOptions} />
       <Grid data={dataCopy} />
       <Stats data={dataCopy} />
     </div>
