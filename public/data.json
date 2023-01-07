@@ -18,7 +18,7 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange"]
+      "color": ["orange", "black"]
     },
     {
       "id": "bresup01",
@@ -57,7 +57,7 @@
       "water_resistance": 600,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange"]
+      "color": ["orange", "black"]
     },
     {
       "id": "pataqu01",
@@ -77,7 +77,7 @@
       "water_resistance": 120,
       "crystal": "sapphire",
       "strap": "composite",
-      "color": ["orange"]
+      "color": ["orange", "black"]
     },
     {
       "id": "patgra01",
@@ -115,7 +115,7 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "rubber",
-      "color": []
+      "color": ["blue", "white", "gray"]
     },
     {
       "id": "arc20001",
@@ -134,7 +134,7 @@
       "water_resistance": 200,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange"]
+      "color": ["orange", "black"]
     },
     {
       "id": "bretop01",
@@ -153,7 +153,7 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange"]
+      "color": ["orange", "blue", "white"]
     },
     {
       "id": "squ15201",
@@ -172,7 +172,7 @@
       "water_resistance": 500,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange"]
+      "color": ["orange", "blue"]
     },
     {
       "id": "rolgmt01",
@@ -191,7 +191,8 @@
       "thickness": 12.1,
       "water_resistance": 100,
       "crystal": "sapphire",
-      "strap": "steel"
+      "strap": "steel",
+      "color": ["blue", "red", "black"]
     },
     {
       "id": "rolgmt02",
@@ -210,7 +211,7 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["gold"]
+      "color": ["gold", "black"]
     },
     {
       "id": "rolsub01",
@@ -228,7 +229,8 @@
       "thickness": 13,
       "water_resistance": 300,
       "crystal": "sapphire",
-      "strap": "steel"
+      "strap": "steel",
+      "color": ["black"]
     },
     {
       "id": "elkx01",
@@ -248,7 +250,7 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange"]
+      "color": ["orange", "beige"]
     },
     {
       "id": "iwcpil01",
@@ -267,7 +269,8 @@
       "thickness": 13.6,
       "water_resistance": 100,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["black"]
     },
     {
       "id": "muhpro01",
@@ -286,7 +289,7 @@
       "water_resistance": 300,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange"]
+      "color": ["orange", "black"]
     },
     {
       "id": "cartan01",
@@ -304,7 +307,8 @@
       "thickness": 6.6,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["blue"]
     },
     {
       "id": "brenav01",
@@ -323,7 +327,8 @@
       "thickness": 13.6,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["red", "black"]
     },
     {
       "id": "brenav02",
@@ -359,7 +364,8 @@
       "thickness": 12.8,
       "water_resistance": 100,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["black"]
     },
     {
       "id": "jaemas01",
@@ -396,7 +402,8 @@
       "thickness": 10.5,
       "water_resistance": 50,
       "crystal": "sapphire",
-      "strap": "steel"
+      "strap": "steel",
+      "color": ["gray"]
     },
     {
       "id": "graele01",
@@ -431,7 +438,8 @@
       "thickness": 12.1,
       "water_resistance": 50,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["blue"]
     },
     {
       "id": "vacpat01",
@@ -483,7 +491,8 @@
       "thickness": 13.4,
       "water_resistance": 200,
       "crystal": "plastic",
-      "strap": "rubber"
+      "strap": "rubber",
+      "color": ["white"]
     },
     {
       "id": "ala18101",
@@ -501,7 +510,7 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["gold"]
+      "color": ["gold", "blue"]
     },
     {
       "id": "swabio01",
@@ -520,7 +529,7 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "velcro",
-      "color": ["orange"]
+      "color": ["orange", "beige"]
     },
     {
       "id": "hamkha01",
@@ -539,7 +548,8 @@
       "thickness": 13,
       "water_resistance": 50,
       "crystal": "sapphire",
-      "strap": "fabric"
+      "strap": "fabric",
+      "color": ["white"]
     },
     {
       "id": "fpjcla01",
@@ -557,7 +567,8 @@
       "thickness": 8,
       "water_resistance": 0,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["blue"]
     },
     {
       "id": "rolexp01",
@@ -577,7 +588,7 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange"]
+      "color": ["orange", "white"]
     },
     {
       "id": "rolmil01",
@@ -596,7 +607,7 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange"]
+      "color": ["orange", "green", "blue"]
     },
     {
       "id": "patcom01",
@@ -613,7 +624,8 @@
       "thickness": 11.45,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["blue"]
     },
     {
       "id": "patcom02",
@@ -630,7 +642,8 @@
       "thickness": 10.23,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather"
+      "strap": "leather",
+      "color": ["blue"]
     },
     {
       "id": "bulpar01",
@@ -646,7 +659,7 @@
       "diameter": 43,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange"]
+      "color": ["orange", "blue", "white"]
     }
   ]
 }
