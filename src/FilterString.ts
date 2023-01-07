@@ -4,6 +4,10 @@ export default class FilterString implements Filter {
   key: string;
   vals: string[];
 
+  static createNew(newKey: string, newVals: string[]) {
+    return new FilterString(newKey, newVals);
+  }
+
   constructor(newKey: string, newVals: string[]) {
     this.key = newKey;
     this.vals = newVals;

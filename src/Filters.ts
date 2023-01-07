@@ -39,10 +39,10 @@ export default class Filters {
     }
 
     if (filterKey === "price") {
-      return new FilterPrice(val);
+      return FilterPrice.createNew(val);
     }
 
-    return new FilterString(filterKey, val.split(","));
+    return FilterString.createNew(filterKey, val.split(","));
   }
 
   getFilters() : Filter[] {

@@ -4,6 +4,10 @@ export default class FilterPrice implements Filter {
   low: number;
   high: number;
 
+  static createNew(input: string) {
+    return new FilterPrice(input);
+  }
+
   constructor(input: string) {
     let inputArr = input.split("-");
 
