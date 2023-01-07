@@ -1,37 +1,55 @@
 import { PageData } from "./Types";
 
+interface CountData {
+  key: string;
+  count: number;
+}
+
 export default class FilterOptions {
-  brands: { [key: string]: number };
-  types: { [key: string]: number };
-  colors: { [key: string]: number };
+  brands: CountData[];
+  types: CountData[];
+  colors: CountData[];
 
   constructor(data: PageData) {
-    this.brands = {};
-    this.types = {};
-    this.colors = {};
+    this.brands = [];
+    this.types = [];
+    this.colors = [];
 
+    let brandsObj: { [key: string]: number } = {};
+    let typesObj: { [key: string]: number } = {};
+    let colorsObj: { [key: string]: number } = {};
     data.watches.forEach((watch, i) => {
-      if (this.brands.hasOwnProperty(watch.brand)) {
-        this.brands[watch.brand]++;
+      if (brandsObj.hasOwnProperty(watch.brand)) {
+        brandsObj[watch.brand]++;
       } else {
-        this.brands[watch.brand] = 1;
+        brandsObj[watch.brand] = 1;
       }
 
-      if (this.types.hasOwnProperty(watch.type)) {
-        this.types[watch.type]++;
+      if (typesObj.hasOwnProperty(watch.type)) {
+        typesObj[watch.type]++;
       } else {
-        this.types[watch.type] = 1;
+        typesObj[watch.type] = 1;
       }
 
       if (watch.color) {
         watch.color.forEach((color, j) => {
-          if (this.colors.hasOwnProperty(color)) {
-            this.colors[color]++;
+          if (colorsObj.hasOwnProperty(color)) {
+            colorsObj[color]++;
           } else {
-            this.colors[color] = 1;
+            colorsObj[color] = 1;
           }
         });
       }
     });
+
+    for (const [key, value] of Object.entries(brandsObj)) {
+      this.brands.push({"key": key, "count": value});
+    }
+    for (const [key, value] of Object.entries(typesObj)) {
+      this.types.push({"key": key, "count": value});
+    }
+    for (const [key, value] of Object.entries(colorsObj)) {
+      this.colors.push({"key": key, "count": value});
+    }
   }
 }
