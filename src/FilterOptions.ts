@@ -1,9 +1,4 @@
-import { PageData } from "./Types";
-
-interface CountData {
-  key: string;
-  count: number;
-}
+import { CountData, PageData } from "./Types";
 
 export default class FilterOptions {
   brands: CountData[];

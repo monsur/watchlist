@@ -27,3 +27,8 @@ export interface PageData {
 export interface Filter {
   match(item: any): boolean;
 }
+
+export interface CountData {
+  key: string;
+  count: number;
+}
