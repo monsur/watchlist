@@ -56,7 +56,7 @@ function App() {
   }
 
   const getFilterFunction = () => {
-    const filters = new Filters(searchParams);
+    const filters = new Filters(data, searchParams);
     if (!filters.exists()) {
       return () => true;
     }

@@ -1,11 +1,11 @@
 import FilterPrice from "./FilterPrice";
 import FilterString from "./FilterString";
-import { Filter } from "./Types";
+import { Filter, PageData } from "./Types";
 
 export default class Filters {
   _filters: Filter[];
 
-  constructor(searchParams: URLSearchParams) {
+  constructor(data: PageData|null, searchParams: URLSearchParams) {
     this._filters = [];
     Filters.parseFilters(searchParams, this._filters);
   }
