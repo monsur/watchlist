@@ -33,16 +33,16 @@ export default class Filters {
       return null;
     }
 
-    let filterKey = key.substring(2);
-    if (!filterKey) {
+    let fieldName = key.substring(2);
+    if (!fieldName) {
       return null;
     }
 
-    if (filterKey === "price") {
-      return FilterPrice.createNew(filterKey, val);
+    if (fieldName === "price") {
+      return FilterPrice.createNew(fieldName, val);
     }
 
-    return FilterString.createNew(filterKey, val);
+    return FilterString.createNew(fieldName, val);
   }
 
   getFilters() : Filter[] {

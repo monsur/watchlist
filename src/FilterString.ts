@@ -1,15 +1,15 @@
 import { Filter } from "./Types";
 
 export default class FilterString implements Filter {
-  key: string;
+  fieldName: string;
   vals: string[];
 
-  static createNew(newKey: string, newVal: string) {
-    return new FilterString(newKey, newVal);
+  static createNew(fieldName: string, newVal: string) {
+    return new FilterString(fieldName, newVal);
   }
 
-  constructor(newKey: string, newVal: string) {
-    this.key = newKey;
+  constructor(fieldName: string, newVal: string) {
+    this.fieldName = fieldName;
     this.vals = newVal.split(",");
   }
 
@@ -18,12 +18,12 @@ export default class FilterString implements Filter {
   }
 
   match(item: any): boolean {
-    if (!item[this.key]) {
+    if (!item[this.fieldName]) {
       return false;
     }
 
     let isMatch = false;
-    let itemVal = item[this.key];
+    let itemVal = item[this.fieldName];
     this.vals.forEach((val, i) => {
       if (Array.isArray(itemVal)) {
         itemVal.forEach((v, i) => {

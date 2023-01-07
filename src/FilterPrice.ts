@@ -1,14 +1,16 @@
 import { Filter } from "./Types";
 
 export default class FilterPrice implements Filter {
+  fieldName: string;
   low: number;
   high: number;
 
-  static createNew(newKey: string, newVal: string) {
-    return new FilterPrice(newVal);
+  static createNew(fieldName: string, newVal: string) {
+    return new FilterPrice(fieldName, newVal);
   }
 
-  constructor(input: string) {
+  constructor(fieldName: string, input: string) {
+    this.fieldName = fieldName;
     let inputArr = input.split("-");
 
     let low = parseFloat(inputArr[0]);

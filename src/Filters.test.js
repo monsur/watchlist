@@ -38,7 +38,7 @@ test("Parse valid filter query params", () => {
   expect(filters.exists()).toBeTruthy();
 
   let filter = filters.getFilters()[0];
-  expect(filter.key).toEqual("foo");
+  expect(filter.fieldName).toEqual("foo");
   expect(filter.vals.length).toEqual(1);
   expect(filter.vals[0]).toEqual("bar");
 });
@@ -51,7 +51,7 @@ test("Parse filter with multiple values", () => {
   expect(filters.exists()).toBeTruthy();
 
   let filter = filters.getFilters()[0];
-  expect(filter.key).toEqual("foo");
+  expect(filter.fieldName).toEqual("foo");
   expect(filter.vals.length).toEqual(2);
   expect(filter.vals[0]).toEqual("bar");
   expect(filter.vals[1]).toEqual("baz");
@@ -66,13 +66,13 @@ test("Parse multiple filters", () => {
   expect(filters.exists()).toBeTruthy();
 
   let filter = filters.getFilters()[0];
-  expect(filter.key).toEqual("foo");
+  expect(filter.fieldName).toEqual("foo");
   expect(filter.vals.length).toEqual(2);
   expect(filter.vals[0]).toEqual("bar");
   expect(filter.vals[1]).toEqual("baz");
 
   filter = filters.getFilters()[1];
-  expect(filter.key).toEqual("brand");
+  expect(filter.fieldName).toEqual("brand");
   expect(filter.vals.length).toEqual(1);
   expect(filter.vals[0]).toEqual("rolex");
 });
@@ -86,7 +86,7 @@ test("Parse duplicate filters", () => {
   expect(filters.exists()).toBeTruthy();
 
   let filter = filters.getFilters()[0];
-  expect(filter.key).toEqual("foo");
+  expect(filter.fieldName).toEqual("foo");
   expect(filter.vals.length).toEqual(1);
   expect(filter.vals[0]).toEqual("baz");
 });
