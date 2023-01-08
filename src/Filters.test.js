@@ -1,8 +1,9 @@
 import Filters from "./Filters";
+import data from "../public/data.json";
 
 test("Parse empty query params", () => {
   let searchParams = new URLSearchParams();
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.getFilters().length).toEqual(0);
   expect(filters.exists()).toBeFalsy();
   expect(filters.match({})).toBeFalsy();
@@ -15,7 +16,7 @@ test("Parse invalid query params", () => {
   searchParams.set("f:", "bar");
   searchParams.set("foo", "bar");
   searchParams.set("g:foo", "bar");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.getFilters().length).toEqual(0);
   expect(filters.exists()).toBeFalsy();
   expect(filters.match({})).toBeFalsy();
@@ -25,7 +26,7 @@ test("Parse invalid query params", () => {
 test("Parse empty filter query params", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.getFilters().length).toEqual(0);
   expect(filters.exists()).toBeFalsy();
 });
@@ -33,7 +34,7 @@ test("Parse empty filter query params", () => {
 test("Parse valid filter query params", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.getFilters().length).toEqual(1);
   expect(filters.exists()).toBeTruthy();
 
@@ -46,7 +47,7 @@ test("Parse valid filter query params", () => {
 test("Parse filter with multiple values", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar,baz");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.getFilters().length).toEqual(1);
   expect(filters.exists()).toBeTruthy();
 
@@ -61,7 +62,7 @@ test("Parse multiple filters", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar,baz");
   searchParams.set("f:brand", "rolex");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.getFilters().length).toEqual(2);
   expect(filters.exists()).toBeTruthy();
 
@@ -81,7 +82,7 @@ test("Parse duplicate filters", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar");
   searchParams.set("f:foo", "baz");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.getFilters().length).toEqual(1);
   expect(filters.exists()).toBeTruthy();
 
@@ -94,14 +95,14 @@ test("Parse duplicate filters", () => {
 test("Match one filter, one value", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.match({"foo": "bar"})).toBeTruthy();
 })
 
 test("Match one filter, multiple values", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar, baz");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.match({"foo": "bar"})).toBeTruthy();
 })
 
@@ -109,7 +110,7 @@ test("Misses multiple filters", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar, baz");
   searchParams.set("f:rolex", "bar");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.match({"foo": "bar"})).toBeFalsy();
 })
 
@@ -117,7 +118,7 @@ test("Matches multiple filters", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:foo", "bar, baz");
   searchParams.set("f:brand", "rolex");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.match({"foo": "bar", "brand": "rolex"})).toBeTruthy();
 })
 
@@ -125,6 +126,6 @@ test("Matches multiple filters (with price)", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:price", "1000");
   searchParams.set("f:brand", "rolex");
-  let filters = new Filters(null, searchParams);
+  let filters = new Filters(data, searchParams);
   expect(filters.match({"price": 1001, "brand": "rolex"})).toBeTruthy();
 })

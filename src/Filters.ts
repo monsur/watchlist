@@ -5,9 +5,14 @@ import { Filter, PageData } from "./Types";
 export default class Filters {
   _filters: Filter[];
 
-  constructor(data: PageData|null, searchParams: URLSearchParams) {
+  constructor(data: PageData, searchParams: URLSearchParams) {
     this._filters = [];
+    Filters.initializeFilters(data, this._filters);
     Filters.parseFilters(searchParams, this._filters);
+  }
+
+  static initializeFilters(data: PageData, filters: Filter[]) {
+    FilterString.createNew2("brand", data);
   }
 
   static parseFilters(searchParams: URLSearchParams, filters: Filter[]) {

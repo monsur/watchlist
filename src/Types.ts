@@ -29,6 +29,7 @@ export interface Filter {
 }
 
 export interface CountData {
-  key: string;
+  field: string;
   count: number;
+  checked?: boolean;
 }

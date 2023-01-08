@@ -1,11 +1,31 @@
-import { Filter } from "./Types";
+import { CountData, Filter, PageData } from "./Types";
 
 export default class FilterString implements Filter {
   fieldName: string;
   vals: string[];
 
-  static createNew(fieldName: string, newVal: string) {
+  static createNew(fieldName: string, newVal: string): FilterString {
     return new FilterString(fieldName, newVal);
+  }
+
+  static createNew2(fieldName: string, data: PageData) {
+    let counter: { [key: string]: number } = {};
+
+    data.watches.forEach((watch, index) => {
+      if (watch.hasOwnProperty(fieldName)) {
+        const fieldValue = (watch as any)[fieldName];
+        if (counter.hasOwnProperty(fieldValue)) {
+          counter[fieldValue]++;
+        } else {
+          counter[fieldValue] = 1;
+        }
+      }
+    });
+
+    let filterItems: CountData[] = []
+    for (const [fieldName, count] of Object.entries(counter)) {
+      filterItems.push({"field": fieldName, "count": count, checked: false});
+    }
   }
 
   constructor(fieldName: string, newVal: string) {
@@ -27,7 +47,7 @@ export default class FilterString implements Filter {
     this.vals.forEach((val, i) => {
       if (Array.isArray(itemVal)) {
         itemVal.forEach((v, i) => {
-          if (this.compare(v, val)) {  
+          if (this.compare(v, val)) {
             isMatch = true;
           }
         });
