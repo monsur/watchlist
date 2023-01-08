@@ -2,6 +2,7 @@ import { CountData, Filter, PageData } from "./Types";
 
 export default class FilterString implements Filter {
   fieldName: string;
+  filterItems?: CountData[];
   vals: string[];
 
   static createNew(fieldName: string, newVal: string): FilterString {
@@ -24,11 +25,13 @@ export default class FilterString implements Filter {
 
     let filterItems: CountData[] = []
     for (const [fieldName, count] of Object.entries(counter)) {
-      filterItems.push({"field": fieldName, "count": count, checked: false});
+      filterItems.push({"fieldName": fieldName, "count": count, checked: false});
     }
+
+    return new FilterString(fieldName, "", filterItems);
   }
 
-  constructor(fieldName: string, newVal: string) {
+  constructor(fieldName: string, newVal: string, fieldValues?: CountData[]) {
     this.fieldName = fieldName;
     this.vals = newVal.split(",");
   }
