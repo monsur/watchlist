@@ -38,13 +38,13 @@ export default class FilterOptions {
     });
 
     for (const [key, value] of Object.entries(brandsObj)) {
-      this.brands.push({"fieldName": key, "count": value});
+      this.brands.push({"fieldValue": key, "count": value, "checked": false});
     }
     for (const [key, value] of Object.entries(typesObj)) {
-      this.types.push({"fieldName": key, "count": value});
+      this.types.push({"fieldValue": key, "count": value, "checked": false});
     }
     for (const [key, value] of Object.entries(colorsObj)) {
-      this.colors.push({"fieldName": key, "count": value});
+      this.colors.push({"fieldValue": key, "count": value, "checked": false});
     }
   }
 }

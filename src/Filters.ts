@@ -4,18 +4,20 @@ import { Filter, PageData } from "./Types";
 
 export default class Filters {
   _filters: Filter[];
+  _filters2: Filter[];
 
   constructor(data: PageData, searchParams: URLSearchParams) {
     this._filters = [];
-    Filters.initializeFilters(data, this._filters);
-    Filters.parseFilters(searchParams, this._filters);
+    this._filters2 = [];
+    Filters.initializeFilters(data, this._filters2);
+    Filters.parseFilters(searchParams, this._filters, this._filters2);
   }
 
   static initializeFilters(data: PageData, filters: Filter[]) {
     FilterString.createNew2("brand", data);
   }
 
-  static parseFilters(searchParams: URLSearchParams, filters: Filter[]) {
+  static parseFilters(searchParams: URLSearchParams, filters: Filter[], filters2: Filter[]) {
     let keys: any = {};
     searchParams.forEach((value, key) => {
       if (keys[key]) {

@@ -16,7 +16,7 @@ function FilterMenuBrands(props: { data: CountData[] }) {
 
   return (
     <FormGroup>
-      {props.data.map(({ fieldName: key, count }, index) => {
+      {props.data.map(({ fieldValue: key, count }, index) => {
         return (
           <FormControlLabel
             control={
