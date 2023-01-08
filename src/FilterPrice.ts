@@ -34,6 +34,10 @@ export default class FilterPrice implements Filter {
     this.high = high;
   }
 
+  initialize(vals: string): void {
+    
+  }
+
   match(item: any) {
     return item.price >= this.low && item.price <= this.high;
   }

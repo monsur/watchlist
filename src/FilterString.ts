@@ -50,13 +50,11 @@ export default class FilterString implements Filter {
     }
     const valsArr = vals.split(",");
     valsArr.forEach((fieldValue, i) => {
-      let filterItem = this.filterItems.find((item) => item.fieldValue === fieldValue);
+      let filterItem = this.filterItems.find((item) => this.compare(item.fieldValue, fieldValue));
       if (filterItem) {
         filterItem.checked = true;
       }
     });
-
-    console.log(this.filterItems);
   }
 
   match(item: any): boolean {

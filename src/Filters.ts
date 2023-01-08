@@ -14,7 +14,7 @@ export default class Filters {
   }
 
   static initializeFilters(data: PageData, filters: Filter[]) {
-    FilterString.createNew2("brand", data);
+    filters.push(FilterString.createNew2("brand", data));
   }
 
   static parseFilters(searchParams: URLSearchParams, filters: Filter[], filters2: Filter[]) {
@@ -27,8 +27,17 @@ export default class Filters {
       if (filter) {
         filters.push(filter);
         keys[key] = 1;
+
+        Filters.setFilterValues(filter.fieldName, value, filters2);
       }
     });
+  }
+
+  static setFilterValues(fieldName: string, values: string, filters: Filter[]) {
+    let item = filters.find((item) => item.fieldName === fieldName);
+    if (item) {
+      item.initialize(values);
+    }
   }
 
   static getFilter(key: string, val: string): Filter | null {
