@@ -74,7 +74,7 @@ test("Match one filter, one value", () => {
 test("Misses multiple filters", () => {
   let searchParams = new URLSearchParams();
   searchParams.set("f:color", "orange");
-  searchParams.set("f:rolex", "bar");
+  searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
   expect(filters.match({"color": "black"})).toBeFalsy();
 })
