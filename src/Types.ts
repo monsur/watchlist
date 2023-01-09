@@ -26,6 +26,7 @@ export interface PageData {
 
 export interface Filter {
   fieldName: string;
+  enabled: boolean;
   initialize(vals: string): void;
   match(item: any): boolean;
 }

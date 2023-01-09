@@ -4,12 +4,14 @@ export default class FilterPrice implements Filter {
   fieldName: string;
   low: number;
   high: number;
+  enabled: boolean;
 
   static createNew(fieldName: string, newVal: string) {
     return new FilterPrice(fieldName, newVal);
   }
 
   constructor(fieldName: string, input: string) {
+    this.enabled = true;
     this.fieldName = fieldName;
     let inputArr = input.split("-");
 

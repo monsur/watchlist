@@ -4,58 +4,46 @@ import data from "../public/data.json";
 test("Parse empty query params", () => {
   let searchParams = new URLSearchParams();
   let filters = new Filters(data, searchParams);
-  expect(filters.getFilters().length).toEqual(0);
-  expect(filters.exists()).toBeFalsy();
+  expect(filters.isEnabled()).toBeFalsy();
   expect(filters.match({})).toBeFalsy();
   expect(filters.match({"foo": "bar"})).toBeFalsy();
 });
 
 test("Parse invalid query params", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f", "bar");
-  searchParams.set("f:", "bar");
-  searchParams.set("foo", "bar");
-  searchParams.set("g:foo", "bar");
+  searchParams.set("f", "rolex");
+  searchParams.set("f:", "rolex");
+  searchParams.set("brand", "rolex");
+  searchParams.set("g:brand", "rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.getFilters().length).toEqual(0);
-  expect(filters.exists()).toBeFalsy();
+  expect(filters.isEnabled()).toBeFalsy();
   expect(filters.match({})).toBeFalsy();
-  expect(filters.match({"foo": "bar"})).toBeFalsy();
+  expect(filters.match({"brand": "rolex"})).toBeFalsy();
 });
 
 test("Parse empty filter query params", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "");
+  searchParams.set("f:brand", "");
   let filters = new Filters(data, searchParams);
-  expect(filters.getFilters().length).toEqual(0);
-  expect(filters.exists()).toBeFalsy();
+  expect(filters.isEnabled()).toBeFalsy();
+  expect(filters.match({"brand": "rolex"})).toBeFalsy();
 });
 
 test("Parse valid filter query params", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "bar");
+  searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.getFilters().length).toEqual(1);
-  expect(filters.exists()).toBeTruthy();
-
-  let filter = filters.getFilters()[0];
-  expect(filter.fieldName).toEqual("foo");
-  expect(filter.vals.length).toEqual(1);
-  expect(filter.vals[0]).toEqual("bar");
+  expect(filters.isEnabled()).toBeTruthy();
+  expect(filters.match({"brand": "Rolex"})).toBeTruthy();
 });
 
 test("Parse filter with multiple values", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "bar,baz");
+  searchParams.set("f:brand", "rolex,cartier");
   let filters = new Filters(data, searchParams);
-  expect(filters.getFilters().length).toEqual(1);
-  expect(filters.exists()).toBeTruthy();
-
-  let filter = filters.getFilters()[0];
-  expect(filter.fieldName).toEqual("foo");
-  expect(filter.vals.length).toEqual(2);
-  expect(filter.vals[0]).toEqual("bar");
-  expect(filter.vals[1]).toEqual("baz");
+  expect(filters.isEnabled()).toBeTruthy();
+  expect(filters.match({"brand": "Rolex"})).toBeTruthy();
+  expect(filters.match({"brand": "Cartier"})).toBeTruthy();
 });
 
 test("Parse multiple filters", () => {
@@ -63,33 +51,18 @@ test("Parse multiple filters", () => {
   searchParams.set("f:foo", "bar,baz");
   searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.getFilters().length).toEqual(2);
-  expect(filters.exists()).toBeTruthy();
-
-  let filter = filters.getFilters()[0];
-  expect(filter.fieldName).toEqual("foo");
-  expect(filter.vals.length).toEqual(2);
-  expect(filter.vals[0]).toEqual("bar");
-  expect(filter.vals[1]).toEqual("baz");
-
-  filter = filters.getFilters()[1];
-  expect(filter.fieldName).toEqual("brand");
-  expect(filter.vals.length).toEqual(1);
-  expect(filter.vals[0]).toEqual("rolex");
+  expect(filters.isEnabled()).toBeTruthy();
+  expect(filters.match({"brand": "Rolex"})).toBeTruthy();
+  expect(filters.match({"brand": "Cartier"})).toBeFalsy();
 });
 
 test("Parse duplicate filters", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "bar");
-  searchParams.set("f:foo", "baz");
+  searchParams.set("f:brand", "rolex");
+  searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.getFilters().length).toEqual(1);
-  expect(filters.exists()).toBeTruthy();
-
-  let filter = filters.getFilters()[0];
-  expect(filter.fieldName).toEqual("foo");
-  expect(filter.vals.length).toEqual(1);
-  expect(filter.vals[0]).toEqual("baz");
+  expect(filters.isEnabled()).toBeTruthy();
+  expect(filters.match({"brand": "Rolex"})).toBeTruthy();
 });
 
 test("Match one filter, one value", () => {
@@ -97,13 +70,6 @@ test("Match one filter, one value", () => {
   searchParams.set("f:brand", "Rolex");
   let filters = new Filters(data, searchParams);
   expect(filters.match({"brand": "Rolex"})).toBeTruthy();
-})
-
-test("Match one filter, multiple values", () => {
-  let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "bar, baz");
-  let filters = new Filters(data, searchParams);
-  expect(filters.match({"foo": "bar"})).toBeTruthy();
 })
 
 test("Misses multiple filters", () => {

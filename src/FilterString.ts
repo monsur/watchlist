@@ -4,13 +4,9 @@ import data from "../public/data.json";
 export default class FilterString implements Filter {
   fieldName: string;
   filterItems: CountData[];
-  vals: string[];
+  enabled: boolean;
 
-  static createNew(fieldName: string, newVal: string): FilterString {
-    return new FilterString(fieldName, newVal);
-  }
-
-  static createNew2(fieldName: string, data: PageData) {
+  static createNew(fieldName: string, data: PageData) {
     let counter: { [key: string]: number } = {};
 
     data.watches.forEach((watch, index) => {
@@ -29,12 +25,12 @@ export default class FilterString implements Filter {
       filterItems.push({ fieldValue: fieldName, count: count, checked: false });
     }
 
-    return new FilterString(fieldName, "", filterItems);
+    return new FilterString(fieldName, filterItems);
   }
 
-  constructor(fieldName: string, newVal: string, fieldValues?: CountData[]) {
+  constructor(fieldName: string, fieldValues?: CountData[]) {
     this.fieldName = fieldName;
-    this.vals = newVal.split(",");
+    this.enabled = false;
     this.filterItems = [];
     if (fieldValues) {
       this.filterItems = fieldValues;
@@ -56,6 +52,7 @@ export default class FilterString implements Filter {
       );
       if (filterItem) {
         filterItem.checked = true;
+        this.enabled = true;
       }
     });
   }

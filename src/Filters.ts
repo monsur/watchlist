@@ -4,76 +4,55 @@ import { Filter, PageData } from "./Types";
 
 export default class Filters {
   _filters: Filter[];
-  _filters2: Filter[];
 
   constructor(data: PageData, searchParams: URLSearchParams) {
     this._filters = [];
-    this._filters2 = [];
-    Filters.initializeFilters(data, this._filters2);
-    Filters.parseFilters(searchParams, this._filters, this._filters2);
+    Filters.initializeFilters(data, this._filters);
+    Filters.parseFilters(searchParams, this._filters);
   }
 
   static initializeFilters(data: PageData, filters: Filter[]) {
-    filters.push(FilterString.createNew2("brand", data));
+    filters.push(FilterString.createNew("brand", data));
   }
 
-  static parseFilters(searchParams: URLSearchParams, filters: Filter[], filters2: Filter[]) {
+  static parseFilters(searchParams: URLSearchParams, filters2: Filter[]) {
     let keys: any = {};
     searchParams.forEach((value, key) => {
       if (keys[key]) {
         throw new Error("Duplicate filter: " + key);
       }
-      const filter = Filters.getFilter(key, value);
-      if (filter) {
-        filters.push(filter);
-        keys[key] = 1;
 
-        Filters.setFilterValues(filter.fieldName, value, filters2);
+      if (!value) {
+        return;
       }
+
+      if (!key.startsWith("f:")) {
+        return;
+      }
+
+      let fieldName = key.substring(2);
+      if (!fieldName) {
+        return;
+      }
+
+      const fieldFilter = filters2.find((item) => item.fieldName === fieldName);
+      if (!fieldFilter) {
+        return;
+      }
+      fieldFilter.initialize(value);
     });
   }
 
-  static setFilterValues(fieldName: string, values: string, filters: Filter[]) {
-    let item = filters.find((item) => item.fieldName === fieldName);
-    if (item) {
-      item.initialize(values);
-    }
+  isEnabled() {
+    let isEnabled = true;
+    this._filters.forEach((f) => {
+      console.log(f.enabled);
+      isEnabled = isEnabled && f.enabled;
+    });
+    return isEnabled;
   }
 
-  static getFilter(key: string, val: string): Filter | null {
-    if (!val) {
-      return null;
-    }
-
-    if (!key.startsWith("f:")) {
-      return null;
-    }
-
-    let fieldName = key.substring(2);
-    if (!fieldName) {
-      return null;
-    }
-
-    if (fieldName === "price") {
-      return FilterPrice.createNew(fieldName, val);
-    }
-
-    return FilterString.createNew(fieldName, val);
-  }
-
-  getFilters() : Filter[] {
-    return this._filters;
-  }
-
-  exists() : boolean {
-    return this._filters.length > 0;
-  }
-
-  match(item: any) : boolean {
-    if (!this.exists()) {
-      return false;
-    }
-
+  match(item: any): boolean {
     let isMatch = true;
     this._filters.forEach((filter, i) => {
       isMatch = isMatch && filter.match(item);
