@@ -60,7 +60,6 @@ function App() {
     if (!filters.isEnabled()) {
       return () => true;
     }
-    console.log("here");
     return (function (filters) {
       return function (item: any) {
         return filters.match(item);
