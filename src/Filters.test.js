@@ -84,7 +84,7 @@ test("Matches multiple filters", () => {
   searchParams.set("f:color", "orange");
   searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.match({"color": "orange", "brand": "rolex"})).toBeTruthy();
+  expect(filters.match({"color": "orafnge", "brand": "rolex"})).toBeTruthy();
 })
 
 test("Matches multiple filters (with price)", () => {

@@ -9,6 +9,7 @@ export default class Filters {
     this._filters = [];
     this._filters.push(FilterString.createNew("brand", data));
     this._filters.push(FilterString.createNew("type", data));
+    this._filters.push(FilterString.createNew("color", data));
     Filters.parseFilters(searchParams, this._filters);
   }
 
@@ -42,7 +43,7 @@ export default class Filters {
         // Right now, there must be a valid filter object to be able to filter on a field.
         // Could make the filter more generic and allow filtering on any field (even if 
         // there's not filter object), but that's more work.
-        return;
+        throw new Error(`Filter for field "${fieldName}" is not valid.`);
       }
 
       fieldFilter.initialize(value);

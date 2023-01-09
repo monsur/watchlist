@@ -78,7 +78,7 @@ export default class FilterString implements Filter {
     checkedFilterItems.forEach((item, i) => {
       if (Array.isArray(sourceValue)) {
         sourceValue.forEach((v, i) => {
-          if (this.compare(v, item)) {
+          if (this.compare(v, item.fieldValue)) {
             isMatch = true;
           }
         });
