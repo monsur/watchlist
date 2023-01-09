@@ -1,5 +1,4 @@
 import { CountData, Filter, PageData } from "./Types";
-import data from "../public/data.json";
 
 export default class FilterString implements Filter {
   fieldName: string;
@@ -45,6 +44,8 @@ export default class FilterString implements Filter {
     if (this.filterItems.length === 0) {
       return;
     }
+
+    this.enabled = false;
     const valsArr = vals.split(",");
     valsArr.forEach((fieldValue, i) => {
       let filterItem = this.filterItems.find((item) =>
@@ -55,6 +56,11 @@ export default class FilterString implements Filter {
         this.enabled = true;
       }
     });
+    if (!this.enabled) {
+      // Need to decide what to do with invalid values.
+      // Throwing an error for now so that it's seen.
+      throw new Error(`Value "${vals}" is invalid for field "${this.fieldName}".`)
+    }
   }
 
   match(item: any): boolean {
