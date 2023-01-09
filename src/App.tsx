@@ -57,9 +57,6 @@ function App() {
 
   const getFilterFunction = () => {
     const filters = new Filters(data, searchParams);
-    if (!filters.isEnabled()) {
-      return () => true;
-    }
     return (function (filters) {
       return function (item: any) {
         return filters.match(item);

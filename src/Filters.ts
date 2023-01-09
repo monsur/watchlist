@@ -7,12 +7,9 @@ export default class Filters {
 
   constructor(data: PageData, searchParams: URLSearchParams) {
     this._filters = [];
-    Filters.initializeFilters(data, this._filters);
+    this._filters.push(FilterString.createNew("brand", data));
+    this._filters.push(FilterString.createNew("type", data));
     Filters.parseFilters(searchParams, this._filters);
-  }
-
-  static initializeFilters(data: PageData, filters: Filter[]) {
-    filters.push(FilterString.createNew("brand", data));
   }
 
   static parseFilters(searchParams: URLSearchParams, filters: Filter[]) {
@@ -52,18 +49,12 @@ export default class Filters {
     });
   }
 
-  isEnabled() {
-    let isEnabled = true;
-    this._filters.forEach((f) => {
-      isEnabled = isEnabled && f.enabled;
-    });
-    return isEnabled;
-  }
-
   match(item: any): boolean {
     let isMatch = true;
     this._filters.forEach((filter, i) => {
-      isMatch = isMatch && filter.match(item);
+      if (filter.enabled) {
+        isMatch = isMatch && filter.match(item);
+      }
     });
     return isMatch;
   }
