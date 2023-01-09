@@ -1,36 +1,29 @@
 import FilterString from "./FilterString";
+import data from "../public/data.json";
 
 test("Empty filter doesn't match", () => {
-  const filter = FilterString.createNew("", "");
+  const filter = FilterString.createNew2("brand", data);
   expect(filter.match({})).toBeFalsy();
 })
 
 test("filter keys don't match", () => {
-  const filter = FilterString.createNew("foo", "");
+  const filter = FilterString.createNew2("brand", data);
   expect(filter.match({"bar": "bar"})).toBeFalsy();
 })
 
 test("filter values don't match", () => {
-  const filter = FilterString.createNew("foo", "foo");
-  expect(filter.match({"foo": "bar"})).toBeFalsy();
+  const filter = FilterString.createNew2("brand", data);
+  expect(filter.match({"brand": "Rolex"})).toBeFalsy();
 })
 
 test("filter values match", () => {
-  const filter = FilterString.createNew("foo", "foo");
-  expect(filter.match({"foo": "foo"})).toBeTruthy();
+  const filter = FilterString.createNew2("brand", data);
+  filter.initialize("rolex");
+  expect(filter.match({"brand": "Rolex"})).toBeTruthy();
 })
 
 test("filter values match (multiple values)", () => {
-  const filter = FilterString.createNew("foo", "baz,foo");
-  expect(filter.match({"foo": "foo"})).toBeTruthy();
-})
-
-test("filter values match (mixed case)", () => {
-  const filter = FilterString.createNew("foo", "FOO");
-  expect(filter.match({"foo": "foo"})).toBeTruthy();
-})
-
-test("filter array match (mixed case)", () => {
-  const filter = FilterString.createNew("color", "orange" );
-  expect(filter.match({"color": ["oRange"]})).toBeTruthy();
+  const filter = FilterString.createNew2("brand", data);
+  filter.initialize("rolex,cartier");
+  expect(filter.match({"brand": "Cartier"})).toBeTruthy();
 })

@@ -94,9 +94,9 @@ test("Parse duplicate filters", () => {
 
 test("Match one filter, one value", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "bar");
+  searchParams.set("f:brand", "Rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.match({"foo": "bar"})).toBeTruthy();
+  expect(filters.match({"brand": "Rolex"})).toBeTruthy();
 })
 
 test("Match one filter, multiple values", () => {

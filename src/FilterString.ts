@@ -1,4 +1,5 @@
 import { CountData, Filter, PageData } from "./Types";
+import data from "../public/data.json";
 
 export default class FilterString implements Filter {
   fieldName: string;
@@ -23,9 +24,9 @@ export default class FilterString implements Filter {
       }
     });
 
-    let filterItems: CountData[] = []
+    let filterItems: CountData[] = [];
     for (const [fieldName, count] of Object.entries(counter)) {
-      filterItems.push({"fieldValue": fieldName, "count": count, checked: false});
+      filterItems.push({ fieldValue: fieldName, count: count, checked: false });
     }
 
     return new FilterString(fieldName, "", filterItems);
@@ -50,7 +51,9 @@ export default class FilterString implements Filter {
     }
     const valsArr = vals.split(",");
     valsArr.forEach((fieldValue, i) => {
-      let filterItem = this.filterItems.find((item) => this.compare(item.fieldValue, fieldValue));
+      let filterItem = this.filterItems.find((item) =>
+        this.compare(item.fieldValue, fieldValue)
+      );
       if (filterItem) {
         filterItem.checked = true;
       }
@@ -61,17 +64,22 @@ export default class FilterString implements Filter {
     if (!item[this.fieldName]) {
       return false;
     }
+    let sourceValue = item[this.fieldName];
+
+    const checkedFilterItems = this.filterItems.filter((item) => item.checked);
+    if (checkedFilterItems.length === 0) {
+      return false;
+    }
 
     let isMatch = false;
-    let itemVal = item[this.fieldName];
-    this.vals.forEach((val, i) => {
-      if (Array.isArray(itemVal)) {
-        itemVal.forEach((v, i) => {
-          if (this.compare(v, val)) {
+    checkedFilterItems.forEach((item, i) => {
+      if (Array.isArray(sourceValue)) {
+        sourceValue.forEach((v, i) => {
+          if (this.compare(v, item)) {
             isMatch = true;
           }
         });
-      } else if (this.compare(itemVal, val)) {
+      } else if (this.compare(sourceValue, item.fieldValue)) {
         isMatch = true;
       }
     });
