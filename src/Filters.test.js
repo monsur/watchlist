@@ -81,10 +81,10 @@ test("Misses multiple filters", () => {
 
 test("Matches multiple filters", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "bar, baz");
+  searchParams.set("f:color", "orange");
   searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.match({"foo": "bar", "brand": "rolex"})).toBeTruthy();
+  expect(filters.match({"color": "orange", "brand": "rolex"})).toBeTruthy();
 })
 
 test("Matches multiple filters (with price)", () => {
