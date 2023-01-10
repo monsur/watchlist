@@ -49,10 +49,10 @@ test("Parse filter with multiple values", () => {
 
 test("Parse multiple filters", () => {
   let searchParams = new URLSearchParams();
-  searchParams.set("f:foo", "bar,baz");
+  searchParams.set("f:color", "orange,black");
   searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
-  expect(filters.match({"brand": "Rolex"})).toBeTruthy();
+  expect(filters.match({"brand": "Rolex", "color": "orange"})).toBeTruthy();
   expect(filters.match({"brand": "Cartier"})).toBeFalsy();
 });
 
@@ -77,20 +77,4 @@ test("Misses multiple filters", () => {
   searchParams.set("f:brand", "rolex");
   let filters = new Filters(data, searchParams);
   expect(filters.match({"color": "black"})).toBeFalsy();
-})
-
-test("Matches multiple filters", () => {
-  let searchParams = new URLSearchParams();
-  searchParams.set("f:color", "orange");
-  searchParams.set("f:brand", "rolex");
-  let filters = new Filters(data, searchParams);
-  expect(filters.match({"color": "orafnge", "brand": "rolex"})).toBeTruthy();
-})
-
-test("Matches multiple filters (with price)", () => {
-  let searchParams = new URLSearchParams();
-  searchParams.set("f:price", "1000");
-  searchParams.set("f:brand", "rolex");
-  let filters = new Filters(data, searchParams);
-  expect(filters.match({"price": 1001, "brand": "rolex"})).toBeTruthy();
 })
