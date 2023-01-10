@@ -5,23 +5,22 @@ import { useEffect, useState } from "react";
 import FilterMenuItem from "./FilterMenuItem";
 import Filters from "./Filters";
 import FilterString from "./FilterString";
+import { useSearchParams } from "react-router-dom";
 
 function FilterMenu(props: { filters: Filters }) {
-  const [filters, setFilters] = useState(props.filters);
-
+  let [searchParams, setSearchParams] = useSearchParams();
+  
   function handleClear() {}
 
-  function handleApply() {}
+  function handleApply() {
+    setSearchParams(props.filters.getQueryParam());
+  }
 
   function setChecked(fieldName: string, fieldValue: string, checked: boolean) {
     props.filters.setChecked(fieldName, fieldValue, checked);
   }
-
-  useEffect(() => {
-    setFilters(props.filters);
-  }, [props.filters]);
-
-  const brandFilter = filters.get("brand") as FilterString;
+  
+  const brandFilter = props.filters.get("brand") as FilterString;
   if (!brandFilter) {
     throw new Error(`Filter for "brand" not found.`);
   }

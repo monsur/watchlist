@@ -3,9 +3,20 @@ import { useState } from "react";
 import FilterString from "./FilterString";
 import { CountData, Filter } from "./Types";
 
-function FilterMenuItem(props: { filter: FilterString, handleCheck: (a: string, b: string, c: boolean) => void }) {
-  function handleCheck(fieldValue: string, checked: boolean) {
-    props.handleCheck(props.filter.fieldName, fieldValue, !checked);
+function FilterMenuItem(props: {
+  filter: FilterString;
+  handleCheck: (a: string, b: string, c: boolean) => void;
+}) {
+  const [checkedItems, setCheckedItems] = useState(
+    new Array(props.filter.filterItems.length).fill(false)
+  );
+
+  function handleCheck(index: number, item: CountData) {
+    const updatedCheckedState = checkedItems.map((i, position) =>
+      position === index ? !i : i
+    );
+    setCheckedItems(updatedCheckedState);
+    props.handleCheck(props.filter.fieldName, item.fieldValue, !item.checked);
   }
 
   return (
@@ -16,7 +27,7 @@ function FilterMenuItem(props: { filter: FilterString, handleCheck: (a: string, 
             control={
               <Checkbox
                 checked={item.checked}
-                onChange={() => handleCheck(item.fieldValue, item.checked)}
+                onChange={() => handleCheck(index, item)}
               />
             }
             label={`${item.fieldValue} (${item.count})`}

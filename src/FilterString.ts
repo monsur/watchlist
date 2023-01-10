@@ -97,4 +97,23 @@ export default class FilterString implements Filter {
     }
     item.checked = checked;
   }
+
+  getQueryParam() : {[key: string] : string}|null {
+    const key = "f:" + this.fieldName;
+    let val = "";
+    this.filterItems.forEach((item) => {
+      if (item.checked) {
+        if (val) {
+          val += ",";
+        }
+        val += item.fieldValue;
+      }
+    });
+    if (val) {
+      const returnObj: {[key: string]: string} = {};
+      returnObj[key] = val;
+      return returnObj;
+    }
+    return null;
+  }
 }

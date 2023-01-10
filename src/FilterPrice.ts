@@ -47,4 +47,8 @@ export default class FilterPrice implements Filter {
   setChecked(fieldValue: string, checked: boolean): void {
     throw new Error("setChecked not implemented");
   }
+
+  getQueryParam() : {[key: string] : string}|null {
+    return null;
+  }
 }

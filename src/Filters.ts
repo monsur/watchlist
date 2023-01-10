@@ -71,4 +71,15 @@ export default class Filters {
     }
     filter.setChecked(fieldValue, checked);
   }
+
+  getQueryParam():{[key: string] : string} {
+    let returnObj:{[key: string] : string} = {};
+    this._filters.forEach((item) => {
+      let qp = item.getQueryParam();
+      if (qp) {
+        returnObj = {...returnObj, ...qp};
+      }
+    });
+    return returnObj;
+  }
 }

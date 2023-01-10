@@ -30,6 +30,7 @@ export interface Filter {
   initialize(vals: string): void;
   match(item: any): boolean;
   setChecked(fieldValue: string, checked: boolean): void;
+  getQueryParam(): {[key: string] : string}|null;
 }
 
 export interface CountData {
