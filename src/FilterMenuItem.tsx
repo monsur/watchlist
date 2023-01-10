@@ -21,6 +21,7 @@ function FilterMenuItem(props: {
 
   return (
     <FormGroup>
+      <div>{props.filter.fieldName}</div>
       {props.filter.filterItems.map((item: CountData, index) => {
         return (
           <FormControlLabel

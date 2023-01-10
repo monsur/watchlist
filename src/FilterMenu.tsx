@@ -23,11 +23,6 @@ function FilterMenu(props: { filters: Filters, handleClose: any }) {
   function setChecked(fieldName: string, fieldValue: string, checked: boolean) {
     props.filters.setChecked(fieldName, fieldValue, checked);
   }
-  
-  const brandFilter = props.filters.get("brand") as FilterString;
-  if (!brandFilter) {
-    throw new Error(`Filter for "brand" not found.`);
-  }
 
   return (
     <Box>
@@ -37,7 +32,9 @@ function FilterMenu(props: { filters: Filters, handleClose: any }) {
       <Button variant="contained" onClick={handleApply}>
         Apply
       </Button>
-      <FilterMenuItem filter={brandFilter} handleCheck={setChecked} />
+      <FilterMenuItem filter={props.filters.get("brand") as FilterString} handleCheck={setChecked} />
+      <FilterMenuItem filter={props.filters.get("type") as FilterString} handleCheck={setChecked} />
+      <FilterMenuItem filter={props.filters.get("color") as FilterString} handleCheck={setChecked} />
     </Box>
   );
 }

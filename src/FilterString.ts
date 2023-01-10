@@ -10,11 +10,17 @@ export default class FilterString implements Filter {
 
     data.watches.forEach((watch, index) => {
       if (watch.hasOwnProperty(fieldName)) {
-        const fieldValue = (watch as any)[fieldName];
-        if (counter.hasOwnProperty(fieldValue)) {
-          counter[fieldValue]++;
-        } else {
-          counter[fieldValue] = 1;
+        let fieldValue = (watch as any)[fieldName];
+        if (!Array.isArray(fieldValue)) {
+          fieldValue = [fieldValue];
+        }
+        for (var i = 0; i < fieldValue.length; i++) {
+          const fieldSubValue = fieldValue[i];
+          if (counter.hasOwnProperty(fieldSubValue)) {
+            counter[fieldSubValue]++;
+          } else {
+            counter[fieldSubValue] = 1;
+          }
         }
       }
     });
@@ -59,7 +65,9 @@ export default class FilterString implements Filter {
     if (!this.enabled) {
       // Need to decide what to do with invalid values.
       // Throwing an error for now so that it's seen.
-      throw new Error(`Value "${vals}" is invalid for field "${this.fieldName}".`)
+      throw new Error(
+        `Value "${vals}" is invalid for field "${this.fieldName}".`
+      );
     }
   }
 
@@ -91,14 +99,16 @@ export default class FilterString implements Filter {
   }
 
   setChecked(fieldValue: string, checked: boolean): void {
-    const item = this.filterItems.find((i) => this.compare(i.fieldValue, fieldValue));
+    const item = this.filterItems.find((i) =>
+      this.compare(i.fieldValue, fieldValue)
+    );
     if (!item) {
       throw new Error(`No filter for value "${fieldValue}".`);
     }
     item.checked = checked;
   }
 
-  getQueryParam() : {[key: string] : string}|null {
+  getQueryParam(): { [key: string]: string } | null {
     const key = "f:" + this.fieldName;
     let val = "";
     this.filterItems.forEach((item) => {
@@ -110,7 +120,7 @@ export default class FilterString implements Filter {
       }
     });
     if (val) {
-      const returnObj: {[key: string]: string} = {};
+      const returnObj: { [key: string]: string } = {};
       returnObj[key] = val;
       return returnObj;
     }
