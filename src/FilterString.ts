@@ -36,8 +36,8 @@ export default class FilterString implements Filter {
     }
   }
 
-  private compare(a: any, b: any) {
-    return a.toString().toLowerCase() === b.toString().toLowerCase();
+  private compare(a: string, b: string) {
+    return a.toLowerCase() === b.toLowerCase();
   }
 
   initialize(vals: string) {
