@@ -7,13 +7,17 @@ import Filters from "./Filters";
 import FilterString from "./FilterString";
 import { useSearchParams } from "react-router-dom";
 
-function FilterMenu(props: { filters: Filters }) {
+function FilterMenu(props: { filters: Filters, handleClose: any }) {
   let [searchParams, setSearchParams] = useSearchParams();
   
-  function handleClear() {}
+  function handleClear() {
+    setSearchParams({});
+    props.handleClose();
+  }
 
   function handleApply() {
     setSearchParams(props.filters.getQueryParam());
+    props.handleClose();
   }
 
   function setChecked(fieldName: string, fieldValue: string, checked: boolean) {

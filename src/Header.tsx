@@ -32,7 +32,7 @@ function Header(props: { title: string; filters: Filters }) {
         </Toolbar>
 
         <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
-          <FilterMenu filters={props.filters}></FilterMenu>
+          <FilterMenu filters={props.filters} handleClose={() => setIsDrawerOpen(false)}></FilterMenu>
         </Drawer>
 
       </AppBar>
