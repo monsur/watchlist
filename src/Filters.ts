@@ -50,6 +50,10 @@ export default class Filters {
     });
   }
 
+  get(fieldName: string) : Filter|null {
+    return this._filters.find((item) => item.fieldName === fieldName) || null;
+  }
+
   match(item: any): boolean {
     let isMatch = true;
     this._filters.forEach((filter, i) => {
@@ -58,5 +62,13 @@ export default class Filters {
       }
     });
     return isMatch;
+  }
+
+  setChecked(fieldName: string, fieldValue: string, checked: boolean) : void {
+    const filter = this._filters.find((f) => f.fieldName === fieldName);
+    if (!filter) {
+      throw new Error(`No filter for field "${fieldName}".`);
+    }
+    filter.setChecked(fieldValue, checked);
   }
 }

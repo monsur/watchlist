@@ -7,9 +7,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer } from "@mui/material";
 import { useState } from "react";
 import FilterMenu from "./FilterMenu";
-import FilterOptions from "./FilterOptions";
+import Filters from "./Filters";
 
-function Header(props: { title: string; filterOptions: FilterOptions }) {
+function Header(props: { title: string; filters: Filters }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
@@ -32,7 +32,7 @@ function Header(props: { title: string; filterOptions: FilterOptions }) {
         </Toolbar>
 
         <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
-          <FilterMenu filterOptions={props.filterOptions}></FilterMenu>
+          <FilterMenu filters={props.filters}></FilterMenu>
         </Drawer>
 
       </AppBar>

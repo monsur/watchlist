@@ -29,6 +29,7 @@ export interface Filter {
   enabled: boolean;
   initialize(vals: string): void;
   match(item: any): boolean;
+  setChecked(fieldValue: string, checked: boolean): void;
 }
 
 export interface CountData {
