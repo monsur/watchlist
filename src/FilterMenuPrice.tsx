@@ -13,7 +13,7 @@ function FilterMenuPrice(props: { filter: FilterPrice }) {
   };
 
   return (
-          <Slider
+    <Slider
       getAriaLabel={() => "Price"}
       value={value}
       onChange={handleChange}
