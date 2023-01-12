@@ -698,6 +698,23 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["orange"]
+    },
+    {
+      "id": "bulchr01",
+      "brand": "Bulove",
+      "collection": "Archive Series",
+      "detail": "Chronograph A",
+      "type": "chronograph",
+      "image": "bulova-chronograph.jpg",
+      "link": "https://www.bulova.com/us/en/product/98A254.html",
+      "price": 695,
+      "ref": "98A254",
+      "movement": "6S21",
+      "diameter": 40.5,
+      "water_resistance": 200,
+      "crystal": "sapphire",
+      "strap": "rubber",
+      "color": ["orange"]
     }
   ]
 }
