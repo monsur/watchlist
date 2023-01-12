@@ -647,6 +647,23 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["orange"]
+    },
+    {
+      "id": "bulpar01",
+      "brand": "Zodiac",
+      "collection": "Super Sea Wolf",
+      "detail": "Super Sea Wolf Automatic Blue Rubber Watch",
+      "type": "dive",
+      "image": "zodiac-sea-wolf.jpg",
+      "link": "https://www.zodiacwatches.com/en-us/products/super-sea-wolf-automatic-blue-rubber-watch/ZO9270.html",
+      "price": 1195,
+      "ref": "ZO9270",
+      "movement": "",
+      "diameter": 40,
+      "water_resistance": 200,
+      "crystal": "sapphire",
+      "strap": "rubber",
+      "color": ["orange"]
     }
   ]
 }
