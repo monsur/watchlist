@@ -10,6 +10,7 @@ export default class Filters {
     this._filters.push(FilterString.createNew("brand", data));
     this._filters.push(FilterString.createNew("type", data));
     this._filters.push(FilterString.createNew("color", data));
+    this._filters.push(FilterPrice.createNew("price", data));
     Filters.parseFilters(searchParams, this._filters);
   }
 

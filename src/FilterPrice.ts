@@ -1,43 +1,52 @@
-import { Filter } from "./Types";
+import { Filter, PageData } from "./Types";
 
 export default class FilterPrice implements Filter {
   fieldName: string;
+  min: number;
+  max: number;
   low: number;
   high: number;
   enabled: boolean;
 
-  static createNew(fieldName: string, newVal: string) {
-    return new FilterPrice(fieldName, newVal);
+  static createNew(fieldName: string, data: PageData) {
+    let max = 0;
+    data.watches.forEach((item) => {
+      if (item.price > max) {
+        max = item.price;
+      }
+    });
+    return new FilterPrice(fieldName, max);
   }
 
-  constructor(fieldName: string, input: string) {
-    this.enabled = true;
+  constructor(fieldName: string, max: number) {
+    this.enabled = false;
     this.fieldName = fieldName;
-    let inputArr = input.split("-");
+    this.min = this.low = 0;
+    this.max = this.high = max;
+  }
 
-    let low = parseFloat(inputArr[0]);
+  initialize(vals: string): void {
+    let valsArr = vals.split("-");
+
+    let low = parseFloat(valsArr[0]);
     if (isNaN(low)) {
-      throw new Error(`Price "${inputArr[0]}" is not a number`);
+      throw new Error(`Price "${valsArr[0]}" is not a number`);
     }
     this.low = low;
 
-    if (inputArr.length === 1) {
-      this.high = 1000000;
+    this.enabled = true;
+    if (valsArr.length === 1) {
       return;
     }
 
-    let high = parseFloat(inputArr[1]);
+    let high = parseFloat(valsArr[1]);
     if (isNaN(high)) {
-      throw new Error(`Price "${inputArr[1]}" is not a number`);
+      throw new Error(`Price "${valsArr[1]}" is not a number`);
     }
     if (high < low) {
       throw new Error(`Price "${high}" is less than "${low}"`);
     }
     this.high = high;
-  }
-
-  initialize(vals: string): void {
-    
   }
 
   match(item: any) {
@@ -48,7 +57,17 @@ export default class FilterPrice implements Filter {
     throw new Error("setChecked not implemented");
   }
 
-  getQueryParam() : {[key: string] : string}|null {
-    return null;
-  }
+  getQueryParam(): { [key: string]: string } | null {
+    if (this.low === this.min && this.high === this.max) {
+      return null;
+    }
+    let val = this.low.toString();
+    if (this.high !== this.max) {
+      val += "," + this.high.toString();
+    }
+
+    const returnObj: { [key: string]: string } = {};
+    returnObj[this.fieldName] = val;
+    return returnObj;
+}
 }

@@ -6,6 +6,8 @@ import FilterMenuItem from "./FilterMenuItem";
 import Filters from "./Filters";
 import FilterString from "./FilterString";
 import { useSearchParams } from "react-router-dom";
+import FilterMenuPrice from "./FilterMenuPrice";
+import FilterPrice from "./FilterPrice";
 
 function FilterMenu(props: { filters: Filters, handleClose: any }) {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -32,6 +34,7 @@ function FilterMenu(props: { filters: Filters, handleClose: any }) {
       <Button variant="contained" onClick={handleApply}>
         Apply
       </Button>
+      <FilterMenuPrice filter={props.filters.get("price") as FilterPrice}></FilterMenuPrice>
       <FilterMenuItem filter={props.filters.get("brand") as FilterString} handleCheck={setChecked} />
       <FilterMenuItem filter={props.filters.get("type") as FilterString} handleCheck={setChecked} />
       <FilterMenuItem filter={props.filters.get("color") as FilterString} handleCheck={setChecked} />
