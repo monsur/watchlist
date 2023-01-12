@@ -681,6 +681,23 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["orange"]
+    },
+    {
+      "id": "belbrv01",
+      "brand": "Bell & Ross",
+      "collection": "BR V2-92",
+      "detail": "BR V2-92 Orange",
+      "type": "field",
+      "image": "brv2.png",
+      "link": "https://www.bellross.com/us/en-gb/our-watches/our-watches-vintage/BRV2-AUTOMATIC/BR-V2-92-ORANGE-STEEL-BRACELET",
+      "price": 3800,
+      "ref": "BR V2-92 Orange",
+      "movement": "Calibre BR-CAL.302",
+      "diameter": 41,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["orange"]
     }
   ]
 }
