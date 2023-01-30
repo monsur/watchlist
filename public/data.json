@@ -18,7 +18,7 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange", "black"]
+      "color": ["orange"]
     },
     {
       "id": "bresup01",
@@ -44,7 +44,6 @@
       "brand": "Omega",
       "collection": "Seamaster",
       "detail": "Planet Ocean 600M Omega Co-Axial",
-      "rank": 14,
       "type": "dive",
       "image": "omega-seamaster-planet-ocean.png",
       "link": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101002",
@@ -57,7 +56,7 @@
       "water_resistance": 600,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange", "black"]
+      "color": ["orange"]
     },
     {
       "id": "pataqu01",
@@ -77,7 +76,7 @@
       "water_resistance": 120,
       "crystal": "sapphire",
       "strap": "composite",
-      "color": ["orange", "black"]
+      "color": ["orange"]
     },
     {
       "id": "patgra01",
@@ -102,7 +101,7 @@
       "brand": "Zenith",
       "collection": "Chronomaster",
       "detail": "Chronomaster Sport",
-      "rank": 7,
+      "rank": 9,
       "type": "chronograph",
       "image": "zenith-chronomaster.jpg",
       "link": "https://www.zenith-watches.com/en_us/product/chronomaster-sport-03-3100-3600-69-c823",
@@ -115,7 +114,7 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "rubber",
-      "color": ["blue", "white", "gray"]
+      "color": []
     },
     {
       "id": "arc20001",
@@ -134,7 +133,7 @@
       "water_resistance": 200,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange", "black"]
+      "color": ["orange"]
     },
     {
       "id": "bretop01",
@@ -153,7 +152,7 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange", "blue", "white"]
+      "color": ["orange"]
     },
     {
       "id": "squ15201",
@@ -172,14 +171,14 @@
       "water_resistance": 500,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange", "blue"]
+      "color": ["orange"]
     },
     {
       "id": "rolgmt01",
       "brand": "Rolex",
       "collection": "GMT-Master II",
       "detail": "Oystersteel (Pepsi)",
-      "rank": 10,
+      "rank": 6,
       "type": "travel",
       "image": "rolex-gmt.jpg",
       "link": "https://www.rolex.com/watches/gmt-master-ii/m126710blro-0001.html",
@@ -191,33 +190,13 @@
       "thickness": 12.1,
       "water_resistance": 100,
       "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["blue", "red", "black"]
-    },
-    {
-      "id": "rolgmt02",
-      "brand": "Rolex",
-      "collection": "GMT-Master II",
-      "detail": "Everose gold",
-      "type": "travel",
-      "image": "rolex-gmt-everose.jpg",
-      "link": "https://www.rolex.com/watches/gmt-master-ii/m126715chnr-0001.html",
-      "price": 39350,
-      "ref": "126715CHNR",
-      "movement": "Rolex Caliber 3285",
-      "frequency": 28800,
-      "diameter": 40,
-      "thickness": 12.1,
-      "water_resistance": 100,
-      "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["gold", "black"]
+      "strap": "steel"
     },
     {
       "id": "rolsub01",
       "brand": "Rolex",
       "collection": "Submariner",
-      "rank": 9,
+      "rank": 10,
       "type": "dive",
       "image": "rolex-submariner.jpg",
       "link": "https://www.rolex.com/watches/submariner/m124060-0001.html",
@@ -229,15 +208,14 @@
       "thickness": 13,
       "water_resistance": 300,
       "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["black"]
+      "strap": "steel"
     },
     {
       "id": "elkx01",
       "brand": "Elka",
       "collection": "X Series",
       "detail": "X02-0802",
-      "rank": 5,
+      "rank": 7,
       "type": "field",
       "image": "elka.jpg",
       "link": "https://www.elkawatch.ch/order-online-free-shipping/elka-x02-0802",
@@ -250,14 +228,14 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange", "beige"]
+      "color": ["orange"]
     },
     {
       "id": "iwcpil01",
       "brand": "IWC",
       "collection": "Pilot",
       "detail": "Big Pilot Watch 43",
-      "rank": 6,
+      "rank": 8,
       "type": "pilot",
       "image": "iwc-big-pilot.jpg",
       "link": "https://www.iwc.com/us/en/watch-collections/pilot-watches/iw329301-big-pilots-watch-43.html",
@@ -269,8 +247,7 @@
       "thickness": 13.6,
       "water_resistance": 100,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["black"]
+      "strap": "leather"
     },
     {
       "id": "muhpro01",
@@ -289,7 +266,7 @@
       "water_resistance": 300,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange", "black"]
+      "color": ["orange"]
     },
     {
       "id": "cartan01",
@@ -307,8 +284,7 @@
       "thickness": 6.6,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue"]
+      "strap": "leather"
     },
     {
       "id": "brenav01",
@@ -327,8 +303,7 @@
       "thickness": 13.6,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["red", "black"]
+      "strap": "leather"
     },
     {
       "id": "brenav02",
@@ -364,15 +339,14 @@
       "thickness": 12.8,
       "water_resistance": 100,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["black"]
+      "strap": "leather"
     },
     {
       "id": "jaemas01",
       "brand": "Jaeger LeCoultre",
       "collection": "Master Ultra Thin",
       "detail": "Master Ultra Thin Moon",
-      "rank": 8,
+      "rank": 3,
       "type": "dress",
       "image": "jlc-mtu.jpg",
       "link": "https://www.jaeger-lecoultre.com/us-en/watches/master-ultra-thin/master-ultra-thin-moon-stainless-steel-q1368430",
@@ -390,7 +364,7 @@
       "id": "audroy01",
       "brand": "Audemars Piguet",
       "collection": "Royal Oak",
-      "rank": 4,
+      "rank": 5,
       "type": "dress",
       "image": "aproyaloak.png",
       "link": "https://www.audemarspiguet.com/com/en/watch-collection/royal-oak/15500ST.OO.1220ST.02.html",
@@ -402,8 +376,7 @@
       "thickness": 10.5,
       "water_resistance": 50,
       "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["gray"]
+      "strap": "steel"
     },
     {
       "id": "graele01",
@@ -438,8 +411,7 @@
       "thickness": 12.1,
       "water_resistance": 50,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue"]
+      "strap": "leather"
     },
     {
       "id": "vacpat01",
@@ -491,8 +463,7 @@
       "thickness": 13.4,
       "water_resistance": 200,
       "crystal": "plastic",
-      "strap": "rubber",
-      "color": ["white"]
+      "strap": "rubber"
     },
     {
       "id": "ala18101",
@@ -510,33 +481,14 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["gold", "blue"]
-    },
-    {
-      "id": "swabio01",
-      "brand": "Swatch",
-      "collection": " Bioceramic Moonswatch",
-      "detail": "Mission to Jupiter",
-      "rank": 2,
-      "type": "chronograph",
-      "image": "swatch-jupiter.jpg",
-      "link": "https://www.swatch.com/en-us/mission-to-jupiter-so33c100/SO33C100.html",
-      "price": 260,
-      "ref": "SO33C100",
-      "movement": "quartz",
-      "diameter": 42,
-      "thickness": 13,
-      "water_resistance": 30,
-      "crystal": "sapphire",
-      "strap": "velcro",
-      "color": ["orange", "beige"]
+      "color": ["gold"]
     },
     {
       "id": "hamkha01",
       "brand": "Hamilton",
       "collection": "Khaki Field",
       "detail": "Mechanical 38",
-      "rank": 3,
+      "rank": 4,
       "type": "field",
       "image": "hamilton-khaki-field.jpg",
       "link": "https://www.hamiltonwatch.com/en-us/h69439411-khaki-field.html",
@@ -548,8 +500,7 @@
       "thickness": 13,
       "water_resistance": 50,
       "crystal": "sapphire",
-      "strap": "fabric",
-      "color": ["white"]
+      "strap": "fabric"
     },
     {
       "id": "fpjcla01",
@@ -567,8 +518,7 @@
       "thickness": 8,
       "water_resistance": 0,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue"]
+      "strap": "leather"
     },
     {
       "id": "rolexp01",
@@ -588,13 +538,13 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange", "white"]
+      "color": ["orange"]
     },
     {
       "id": "rolmil01",
       "brand": "Rolex",
       "collection": "Milgauss",
-      "rank": 11,
+      "rank": 2,
       "type": "sport",
       "image": "milgauss.jpg",
       "link": "https://www.rolex.com/en-us/watches/milgauss/m116400gv-0002.html",
@@ -607,7 +557,7 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange", "green", "blue"]
+      "color": ["orange"]
     },
     {
       "id": "patcom01",
@@ -624,8 +574,7 @@
       "thickness": 11.45,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue"]
+      "strap": "leather"
     },
     {
       "id": "patcom02",
@@ -642,8 +591,7 @@
       "thickness": 10.23,
       "water_resistance": 30,
       "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue"]
+      "strap": "leather"
     },
     {
       "id": "bulpar01",
@@ -659,7 +607,7 @@
       "diameter": 43,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["orange", "blue", "white"]
+      "color": ["orange"]
     },
     {
       "id": "zodsup01",
