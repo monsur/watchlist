@@ -53,7 +53,7 @@ export default class FilterPrice implements Filter {
     return item.price >= this.low && item.price <= this.high;
   }
 
-  setChecked(fieldValue: string, checked: boolean): void {
+  setValue(val: any): void {
     throw new Error("setChecked not implemented");
   }
 

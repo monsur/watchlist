@@ -98,14 +98,14 @@ export default class FilterString implements Filter {
     return isMatch;
   }
 
-  setChecked(fieldValue: string, checked: boolean): void {
+  setValue(val: any): void {
     const item = this.filterItems.find((i) =>
-      this.compare(i.fieldValue, fieldValue)
+      this.compare(i.fieldValue, val.fieldValue)
     );
     if (!item) {
-      throw new Error(`No filter for value "${fieldValue}".`);
+      throw new Error(`No filter for value "${val.fieldValue}".`);
     }
-    item.checked = checked;
+    item.checked = val.checked;
   }
 
   getQueryParam(): { [key: string]: string } | null {

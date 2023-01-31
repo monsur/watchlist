@@ -70,7 +70,7 @@ export default class Filters {
     if (!filter) {
       throw new Error(`No filter for field "${fieldName}".`);
     }
-    filter.setChecked(fieldValue, checked);
+    filter.setValue({"fieldValue": fieldValue, "checked": checked});
   }
 
   getQueryParam():{[key: string] : string} {

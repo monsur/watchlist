@@ -29,7 +29,7 @@ export interface Filter {
   enabled: boolean;
   initialize(vals: string): void;
   match(item: any): boolean;
-  setChecked(fieldValue: string, checked: boolean): void;
+  setValue(val: any): void;
   getQueryParam(): {[key: string] : string}|null;
 }
 
