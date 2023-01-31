@@ -1,7 +1,7 @@
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 import { useState } from "react";
 import FilterString from "./FilterString";
-import { CountData, Filter } from "./Types";
+import { CountData } from "./Types";
 
 function FilterMenuItem(props: {
   filter: FilterString;
