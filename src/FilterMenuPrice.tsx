@@ -1,7 +1,5 @@
 import { InputAdornment } from "@mui/material";
 import TextField from "@mui/material/TextField";
-import React from "react";
-import FilterPrice from "./FilterPrice";
 
 function FilterMenuPrice(props: {
   lowPrice: string;

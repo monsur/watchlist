@@ -1,7 +1,5 @@
-import FilterOptions from "./FilterOptions";
-import Checkbox from "@mui/material/Checkbox";
-import { Box, Button, FormControlLabel, FormGroup } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Box, Button } from "@mui/material";
+import { useState } from "react";
 import FilterMenuItem from "./FilterMenuItem";
 import Filters from "./Filters";
 import FilterString from "./FilterString";
