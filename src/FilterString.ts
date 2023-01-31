@@ -29,6 +29,7 @@ export default class FilterString implements Filter {
     for (const [fieldName, count] of Object.entries(counter)) {
       filterItems.push({ fieldValue: fieldName, count: count, checked: false });
     }
+    filterItems.sort((a, b) => a.fieldValue.localeCompare(b.fieldValue));
 
     return new FilterString(fieldName, filterItems);
   }
