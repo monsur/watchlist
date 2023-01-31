@@ -1,4 +1,4 @@
-import Slider from "@mui/material/Slider";
+import TextField from '@mui/material/TextField';
 import React from "react";
 import FilterPrice from "./FilterPrice";
 
@@ -13,15 +13,10 @@ function FilterMenuPrice(props: { filter: FilterPrice }) {
   };
 
   return (
-    <Slider
-      getAriaLabel={() => "Price"}
-      value={value}
-      onChange={handleChange}
-      valueLabelDisplay="auto"
-      max={props.filter.max}
-      min={props.filter.min}
-      step={1000}
-    />
+    <div>
+    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+    </div>
   );
 }
 
