@@ -73,6 +73,21 @@ export default class Filters {
     filter.setValue({"fieldValue": fieldValue, "checked": checked});
   }
 
+  setPrice(low: number, high: number) {
+    const filter = this._filters.find((f) => f.fieldName === "price");
+    if (!filter) {
+      throw new Error(`No filter for field "price".`);
+    }
+    let val: any = {};
+    if (low > 0) {
+      val.low = low;
+    }
+    if (high > 0) {
+      val.high = high;
+    }
+    filter.setValue(val);
+  }
+
   getQueryParam():{[key: string] : string} {
     let returnObj:{[key: string] : string} = {};
     this._filters.forEach((item) => {

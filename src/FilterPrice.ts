@@ -54,7 +54,16 @@ export default class FilterPrice implements Filter {
   }
 
   setValue(val: any): void {
-    throw new Error("setChecked not implemented");
+    if (val.low) {
+      this.low = val.low;
+    } else {
+      this.low = this.min;
+    }
+    if (val.high) {
+      this.high = val.high;
+    } else {
+      this.high = this.max;
+    }
   }
 
   getQueryParam(): { [key: string]: string } | null {
@@ -63,11 +72,11 @@ export default class FilterPrice implements Filter {
     }
     let val = this.low.toString();
     if (this.high !== this.max) {
-      val += "," + this.high.toString();
+      val += "-" + this.high.toString();
     }
 
     const returnObj: { [key: string]: string } = {};
-    returnObj[this.fieldName] = val;
+    returnObj["f:" + this.fieldName] = val;
     return returnObj;
 }
 }
