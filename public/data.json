@@ -713,6 +713,23 @@
       "crystal": "sapphire",
       "strap": "fabric",
       "color": ["bronze", "blue"]
+    },
+    {
+      "id": "chae8hf01",
+      "brand": "Chopard",
+      "collection": "Alpine Eagle",
+      "detail": "Cadence 8HF",
+      "type": "dress",
+      "image": "Alpine-Eagle-Cadence-8HF.png",
+      "link": "https://www.chopard.com/en-us/watch/298600-3020.html",
+      "price": 20300,
+      "ref": " 298600-3020",
+      "movement": "Chopard 01.12-C",
+      "diameter": 41,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["orange", "black"]
     }
   ]
 }
