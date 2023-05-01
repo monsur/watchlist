@@ -53,6 +53,23 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["blue"]
+    },
+    {
+      "id": "orichr01",
+      "brand": "Oris",
+      "collection": "Chronoris Date",
+      "type": "chronograph",
+      "image": "chronoris.png",
+      "link": "https://www.oris.ch/en/watch/chronoris-date/01-733-7737-4053-07-8-19-01",
+      "price": 1950,
+      "ref": "01 733 7737 4053-07 8 19 01",
+      "movement": "Oris 733, base SW 200-1",
+      "frequency": 28800,
+      "diameter": 39,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["orange"]
     }
   ]
 }
