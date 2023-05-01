@@ -36,6 +36,23 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["black"]
+    },
+    {
+      "id": "tudbb5801",
+      "brand": "Tudor",
+      "collection": "Black Bay 58",
+      "type": "dive",
+      "image": "tudor-bb58-blue.png",
+      "link": "https://www.tudorwatch.com/en/watches/black-bay-58/m79030b-0001",
+      "price": 3950,
+      "ref": "M79030b-0001",
+      "movement": "Manufacture Calibre MT5402",
+      "frequency": 28800,
+      "diameter": 38,
+      "water_resistance": 200,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["blue"]
     }
   ]
 }
