@@ -70,6 +70,25 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["orange"]
+    },
+    {
+      "id": "ooo02",
+      "brand": "Oak & Oscar",
+      "collection": "Olmsted",
+      "detail": "38",
+      "type": "field",
+      "image": "oando-olmsted-blue.png",
+      "link": "https://oakandoscar.com/collections/all-watches/products/the-olmsted-38?variant=32109538213941",
+      "price": 1525,
+      "ref": "Olmsted 38",
+      "movement": "ETA 2892A2",
+      "frequency": 28800,
+      "diameter": 38,
+      "water_resistance": 100,
+      "thickness": 10.8,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["orange", "blue"]
     }
   ]
 }
