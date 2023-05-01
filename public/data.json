@@ -747,6 +747,24 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["orange", "white"]
+    },
+    {
+      "id": "mios01",
+      "brand": "Mido",
+      "collection": "Ocean Star",
+      "detail": "Decompression Worldtimer",
+      "type": "travel",
+      "image": "mido-oceanstar-worldtimer.png",
+      "link": "https://www.midowatches.com/us/news-ocean-star-decompression-worldtimer.html",
+      "price": 1310,
+      "ref": "M026.829.17.041.00",
+      "movement": "Mido Caliber 80 (base ETA C07.661)",
+      "diameter": 40.5,
+      "water_resistance": 200,
+      "thickness": 13.4,
+      "crystal": "sapphire",
+      "strap": "rubber",
+      "color": ["blue", "pink", "green", "yellow"]
     }
   ]
 }
