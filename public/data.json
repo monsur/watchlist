@@ -730,6 +730,23 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["orange", "black"]
+    },
+    {
+      "id": "zema01",
+      "brand": "Zelos",
+      "collection": "Mako",
+      "detail": "300m GMT 'Frost' Launch Special",
+      "type": "gmt",
+      "image": "zelos-mako.png",
+      "link": "https://zeloswatches.com/products/mako-300m-gmt-frost-launch-special",
+      "price": 529,
+      "ref": " 316L SS",
+      "movement": "Miyota 9075 True GMT",
+      "diameter": 40,
+      "water_resistance": 300,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["orange", "white"]
     }
   ]
 }
