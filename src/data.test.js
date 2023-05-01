@@ -1,5 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import data from "../public/data.json";
+import data from "../public/wishlist.json";
 
 test('Each item has a unique id', () => {
   let ids = {};

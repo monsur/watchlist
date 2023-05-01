@@ -1,5 +1,5 @@
 import FilterPrice from "./FilterPrice";
-import data from "../public/data.json";
+import data from "../public/wishlist.json";
 
 test("Price doesn't match (low only)", () => {
   let filter = FilterPrice.createNew("price", data);

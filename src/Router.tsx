@@ -5,7 +5,7 @@ import Item from "./Item";
 function Router() {
   const loadData = async (requestUrl: string) => {
     const url = new URL(requestUrl);
-    const source = url.searchParams.get("source") || "data";
+    const source = url.searchParams.get("source") || "wishlist";
     return fetch(`${process.env.PUBLIC_URL}/${source}.json`);
   };
 

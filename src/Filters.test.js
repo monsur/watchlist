@@ -1,5 +1,5 @@
 import Filters from "./Filters";
-import data from "../public/data.json";
+import data from "../public/wishlist.json";
 
 test("Parse empty query params", () => {
   let searchParams = new URLSearchParams();

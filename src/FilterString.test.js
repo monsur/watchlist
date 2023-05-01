@@ -1,5 +1,5 @@
 import FilterString from "./FilterString";
-import data from "../public/data.json";
+import data from "../public/wishlist.json";
 
 test("Empty filter doesn't match", () => {
   const filter = FilterString.createNew("brand", data);
