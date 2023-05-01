@@ -191,24 +191,6 @@
       "color": ["blue", "red", "black"]
     },
     {
-      "id": "rolsub01",
-      "brand": "Rolex",
-      "collection": "Submariner",
-      "type": "dive",
-      "image": "rolex-submariner.jpg",
-      "link": "https://www.rolex.com/watches/submariner/m124060-0001.html",
-      "price": 8950,
-      "ref": "5512",
-      "movement": "Rolex Caliber 3230",
-      "frequency": 28800,
-      "diameter": 41,
-      "thickness": 13,
-      "water_resistance": 300,
-      "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["black"]
-    },
-    {
       "id": "elkx01",
       "brand": "Elka",
       "collection": "X Series",

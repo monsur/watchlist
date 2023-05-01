@@ -1,0 +1,23 @@
+{
+  "title": "Watches I Own",
+  "watches": [
+    {
+      "id": "rolsub01",
+      "brand": "Rolex",
+      "collection": "Submariner",
+      "type": "dive",
+      "image": "rolex-submariner.jpg",
+      "link": "https://www.rolex.com/en-us/watches/submariner/m124060-0001",
+      "price": 9100,
+      "ref": "124060",
+      "movement": "Rolex Caliber 3230",
+      "frequency": 28800,
+      "diameter": 41,
+      "thickness": 13,
+      "water_resistance": 300,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["black"]
+    }
+  ]
+}
