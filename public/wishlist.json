@@ -814,6 +814,24 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["gold"]
+    },
+    {
+      "id": "forfli01",
+      "brand": "Fortis",
+      "collection": "Flieger",
+      "detail": "F-39",
+      "type": "pilot",
+      "image": "fortis.png",
+      "link": "https://www.fortis-swiss.com/watches/sky/flieger/flieger-f-39-original-on-aviator-strap/",
+      "price": 2100,
+      "ref": "F4220006",
+      "movement": "UW-30",
+      "frequency": 28800,
+      "diameter": 39,
+      "water_resistance": 200,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["orange"]
     }
   ]
 }
