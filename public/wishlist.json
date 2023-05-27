@@ -777,6 +777,24 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["orange", "white"]
+    },
+    {
+      "id": "hmc01",
+      "brand": "H. Moser & Cie",
+      "collection": "Endeavor",
+      "detail": "Perpetual Calendar Purity",
+      "type": "calendar",
+      "image": "hmoser.png",
+      "link": "https://www.h-moser.com/product/endeavour-perpetual-calendar-8/",
+      "price": 60000,
+      "ref": "1800-0202",
+      "movement": "HMC 800",
+      "frequency": 18000,
+      "diameter": 42,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["green"]
     }
   ]
 }
