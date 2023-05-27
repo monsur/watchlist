@@ -795,6 +795,25 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["green"]
+    },
+    {
+      "id": "vacpat02",
+      "brand": "Vacheron Constantin",
+      "collection": "Patrimony",
+      "detail": "Moon Phase Retrograde Date",
+      "type": "dress",
+      "image": "vc-moon.png",
+      "link": "https://www.vacheron-constantin.com/us/en/collections/patrimony/4010u-000r-b329.html",
+      "price": 44800,
+      "ref": "4010U/000R-B329",
+      "movement": "2460 R31L/1",
+      "frequency": 28800,
+      "diameter": 42.5,
+      "thickness": 9.7,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["gold"]
     }
   ]
 }
