@@ -688,6 +688,25 @@
       "color": ["blue", "pink"]
     },
     {
+      "id": "faraqu01",
+      "brand": "Farer",
+      "collection": "AquaMatic",
+      "detail": "Nazaré",
+      "type": "dive",
+      "image": "farer-aquamatic.jpeg",
+      "link": "https://usd.farer.com/products/nazare",
+      "price": 1050,
+      "ref": "Nazare",
+      "movement": "SW220-1",
+      "frequency": 28800,
+      "diameter": 38.5,
+      "thickness": 11.9,
+      "water_resistance": 200,
+      "crystal": "sapphire",
+      "strap": "rubber",
+      "color": ["green", "pink"]
+    },
+    {
       "id": "islnor01",
       "brand": "Islander",
       "collection": "Northport",
