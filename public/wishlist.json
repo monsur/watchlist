@@ -686,6 +686,25 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["blue", "pink"]
+    },
+    {
+      "id": "islnor01",
+      "brand": "Islander",
+      "collection": "Northport",
+      "detail": "Hi-Beat Automatic Dive Watch",
+      "type": "dive",
+      "image": "islander.jpeg",
+      "link": "https://longislandwatch.com/islander-northport-hi-beat-automatic-dive-watch-with-seafoam-green-and-white-ripple-dial-isl-155/",
+      "price": 429,
+      "ref": "ISL-155",
+      "movement": "Miyota 9015",
+      "frequency": 28800,
+      "diameter": 40.5,
+      "thickness": 12.5,
+      "water_resistance": 200,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["green"]
     }
   ]
 }
