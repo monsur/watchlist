@@ -724,6 +724,25 @@
       "crystal": "sapphire",
       "strap": "steel",
       "color": ["green"]
+    },
+    {
+      "id": "meisin01",
+      "brand": "Meister Singer",
+      "collection": "Classic",
+      "detail": "No. 03",
+      "type": "dress",
+      "image": "meistersinger.png",
+      "link": "https://meistersinger.com/en/product/n03-ivory/",
+      "price": 2200,
+      "ref": "AM903",
+      "movement": "SW200",
+      "frequency": 28800,
+      "diameter": 43,
+      "thickness": 11.5,
+      "water_resistance": 50,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["ivory"]
     }
   ]
 }
