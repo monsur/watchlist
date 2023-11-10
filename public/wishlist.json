@@ -320,24 +320,6 @@
       "strap": "leather"
     },
     {
-      "id": "gsh56001",
-      "brand": "G-Shock",
-      "collection": "5600 Series",
-      "detail": "GWM5610NASA4",
-      "type": "sport",
-      "image": "gshock-nasa.jpg",
-      "link": "https://gshock.casio.com/us/products/collection/limited/gwm5610nasa/",
-      "price": 170,
-      "ref": "GWM5610NASA4",
-      "movement": "quartz",
-      "diameter": 45,
-      "thickness": 12.7,
-      "water_resistance": 200,
-      "crystal": "plastic",
-      "strap": "rubber",
-      "color": ["orange"]
-    },
-    {
       "id": "gsh56002",
       "brand": "G-Shock",
       "collection": "5600 Series",
