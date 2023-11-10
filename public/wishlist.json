@@ -650,6 +650,25 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["green"]
+    },
+    {
+      "id": "oriart01",
+      "brand": "Patek Philippe",
+      "collection": "Grand Complications",
+      "detail": "Celestial",
+      "type": "dress",
+      "image": "patek-grand-celestial.jpg",
+      "link": "https://www.patek.com/en/collection/grand-complications/6102P-001",
+      "price": 354840,
+      "ref": "6102P",
+      "movement": "Caliber 240 LU CL C",
+      "frequency": 28800,
+      "diameter": 44,
+      "thickness": 10.6,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["blue"]
     }
   ]
 }
