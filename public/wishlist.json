@@ -374,24 +374,6 @@
       "color": ["green", "orange"]
     },
     {
-      "id": "patcom01",
-      "brand": "Patek Philippe",
-      "collection": "Complications",
-      "type": "chronograph",
-      "image": "patcom01.jpg",
-      "link": "https://www.patek.com/en/collection/complications/5172G-001",
-      "price": 80430,
-      "ref": "5172G",
-      "movement": "Caliber CH 29-535 PS",
-      "frequency": 28800,
-      "diameter": 41,
-      "thickness": 11.45,
-      "water_resistance": 30,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color":["blue"]
-    },
-    {
       "id": "patcom02",
       "brand": "Patek Philippe",
       "collection": "Complications",
