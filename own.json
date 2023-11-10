@@ -89,6 +89,41 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["orange", "blue"]
+    },
+    {
+      "id": "gssbga01",
+      "brand": "Grand Seiko",
+      "collection": "Heritage",
+      "detail": "SBGA211",
+      "type": "dress",
+      "image": "SBGA211G.png",
+      "link": "https://www.grand-seiko.com/us-en/collections/sbga211g",
+      "price": 6200,
+      "ref": "SBGA211",
+      "movement": "9R65",
+      "diameter": 41,
+      "water_resistance": 100,
+      "thickness": 12.5,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["white", "blue"]
+    },
+    {
+      "id": "gssbga01",
+      "brand": "Casio",
+      "collection": "G Shock",
+      "detail": "GA2100-1A1",
+      "type": "sport",
+      "image": "gshock.png",
+      "link": "https://www.casio.com/us/watches/gshock/product.GA-2100-1A1/",
+      "price": 100,
+      "ref": "GA2100-1A1",
+      "diameter": 45,
+      "water_resistance": 200,
+      "thickness": 11.8,
+      "crystal": "mineral glass",
+      "strap": "rubber",
+      "color": ["black"]
     }
   ]
 }
