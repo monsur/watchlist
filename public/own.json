@@ -89,6 +89,24 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["orange", "blue"]
+    },
+    {
+      "id": "gssbga01",
+      "brand": "Grand Seiko",
+      "collection": "Heritage",
+      "detail": "SBGA211",
+      "type": "dress",
+      "image": "SBGA211G.png",
+      "link": "https://www.grand-seiko.com/us-en/collections/sbga211g",
+      "price": 6200,
+      "ref": "SBGA211",
+      "movement": "9R65",
+      "diameter": 41,
+      "water_resistance": 100,
+      "thickness": 12.5,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["white", "blue"]
     }
   ]
 }
