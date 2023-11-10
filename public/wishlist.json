@@ -96,25 +96,6 @@
       "color": ["blue", "gray"]
     },
     {
-      "id": "squ1521",
-      "brand": "Squale",
-      "collection": "1521",
-      "detail": "Ocean COSC",
-      "type": "dive",
-      "image": "squale-1521.png",
-      "link": "https://www.squale.ch/en/1521-ocean-cosc",
-      "price": 1600,
-      "ref": "1521COSOCN",
-      "movement": "SELLITA SW 200-1",
-      "frequency": 28800,
-      "diameter": 42,
-      "thickness": 12.5,
-      "water_resistance": 500,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue", "orange"]
-    },
-    {
       "id": "rolgmt01",
       "brand": "Rolex",
       "collection": "GMT-Master II",
