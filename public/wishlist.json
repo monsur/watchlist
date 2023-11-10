@@ -115,25 +115,6 @@
       "color": ["black"]
     },
     {
-      "id": "muhpro01",
-      "brand": "Mühle Glashuette",
-      "collection": "ProMare",
-      "detail": "ProMare Date",
-      "type": "dive",
-      "image": "ProMareDate.png",
-      "link": "https://www.muehle-glashuette.de/en/watch/promare-date-rubber-strap/",
-      "price": 2100,
-      "ref": "M1-42-13-NB",
-      "movement": "Mühle SW 400-1",
-      "frequency": 28800,
-      "diameter": 44,
-      "thickness": 12,
-      "water_resistance": 300,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["black", "orange"]
-    },
-    {
       "id": "cartan01",
       "brand": "Cartier",
       "collection": "Tank",
