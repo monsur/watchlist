@@ -467,24 +467,6 @@
       "color":["blue"]
     },
     {
-      "id": "zodsup01",
-      "brand": "Zodiac",
-      "collection": "Super Sea Wolf",
-      "detail": "Super Sea Wolf Automatic Blue Rubber Watch",
-      "type": "dive",
-      "image": "zodiac-sea-wolf.jpg",
-      "link": "https://www.zodiacwatches.com/en-us/products/super-sea-wolf-automatic-blue-rubber-watch/ZO9270.html",
-      "price": 1195,
-      "ref": "ZO9270",
-      "movement": "STP 3-13",
-      "frequency": 28800,
-      "diameter": 40,
-      "water_resistance": 200,
-      "crystal": "sapphire",
-      "strap": "rubber",
-      "color": ["blue", "orange", "white"]
-    },
-    {
       "id": "omseaq01",
       "brand": "Omega",
       "collection": "Seamaster",
