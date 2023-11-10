@@ -632,6 +632,24 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["ivory"]
+    },
+    {
+      "id": "oriart01",
+      "brand": "Oris",
+      "collection": "Artelier",
+      "detail": "Artelier S",
+      "type": "dress",
+      "image": "oris-artelier-s.png",
+      "link": "https://www.oris.ch/en-US/watch/artelier-s/01-733-7762-4057-07-5-20-70fc",
+      "price": 2200,
+      "ref": "01 733 7762 4057-07 5 20 70FC",
+      "movement": "Oris 733, base SW 200-1",
+      "frequency": 28800,
+      "diameter": 38,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["green"]
     }
   ]
 }
