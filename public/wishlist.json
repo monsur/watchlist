@@ -21,25 +21,6 @@
       "color": ["black", "orange"]
     },
     {
-      "id": "omesea01",
-      "brand": "Omega",
-      "collection": "Seamaster",
-      "detail": "Planet Ocean 600M Omega Co-Axial",
-      "type": "dive",
-      "image": "omega-seamaster-planet-ocean.png",
-      "link": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101002",
-      "price": 5900,
-      "ref": "232.30.42.21.01.002",
-      "movement": "Omega 8500",
-      "frequency": 25200,
-      "diameter": 42,
-      "thickness": 15.8,
-      "water_resistance": 600,
-      "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["black", "orange"]
-    },
-    {
       "id": "pataqu01",
       "brand": "Patek Philippe",
       "collection": "Aquanaut",
