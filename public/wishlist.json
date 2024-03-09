@@ -21,6 +21,25 @@
       "color": ["black", "orange"]
     },
     {
+      "id": "omespe02",
+      "brand": "Omega",
+      "collection": "Speedmaster",
+      "detail": "Moonwatch Professional",
+      "type": "chronograph",
+      "image": "speedmaster-white.png",
+      "link": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31030425004001",
+      "price": 8100,
+      "ref": "310.30.42.50.04.001",
+      "movement": "Omega 3861",
+      "frequency": 21600,
+      "diameter": 42,
+      "thickness": 13.2,
+      "water_resistance": 50,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["red", "white"]
+    },
+    {
       "id": "pataqu01",
       "brand": "Patek Philippe",
       "collection": "Aquanaut",
