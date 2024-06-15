@@ -143,6 +143,57 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["blue", "pink"]
+    },
+    {
+      "id": "swamoon01",
+      "brand": "Swatch",
+      "collection": "Bioceramic Moonphase",
+      "detail": "Mission to the Sun",
+      "type": "chronograph",
+      "image": "moonswatch-sun.png",
+      "link": "https://www.swatch.com/en-us/bioceramic-moonswatch-collection/bioceramic-moonswatch/mission-to-the-sun.html",
+      "price": 270,
+      "ref": "SO33J100",
+      "movement": "quartz",
+      "diameter": 42,
+      "thickness": 13.25,
+      "water_resistance": 30,
+      "strap": "velcro",
+      "color": ["yellow"]
+    },
+    {
+      "id": "swamoon02",
+      "brand": "Swatch",
+      "collection": "Bioceramic Moonphase",
+      "detail": "Mission to Jupiter",
+      "type": "chronograph",
+      "image": "moonswatch-jupiter.png",
+      "link": "https://www.swatch.com/en-us/bioceramic-moonswatch-collection/bioceramic-moonswatch/mission-to-jupiter.html",
+      "price": 270,
+      "ref": "SO33C100",
+      "movement": "quartz",
+      "diameter": 42,
+      "thickness": 13.25,
+      "water_resistance": 30,
+      "strap": "velcro",
+      "color": ["brown", "orange"]
+    },
+    {
+      "id": "swamoon03",
+      "brand": "Swatch",
+      "collection": "Bioceramic Moonphase",
+      "detail": "Mission to Pluto",
+      "type": "chronograph",
+      "image": "moonswatch-pluto.png",
+      "link": "https://www.swatch.com/en-us/bioceramic-moonswatch-collection/bioceramic-moonswatch/mission-to-pluto.html",
+      "price": 270,
+      "ref": "SO33M101",
+      "movement": "quartz",
+      "diameter": 42,
+      "thickness": 13.25,
+      "water_resistance": 30,
+      "strap": "velcro",
+      "color": ["gray", "maroon"]
     }
   ]
 }
