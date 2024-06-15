@@ -722,6 +722,25 @@
       "water_resistance": 30,
       "strap": "velcro",
       "color": ["white"]
+    },
+    {
+      "id": "iwcpor01",
+      "brand": "IWC",
+      "collection": "Portugieser",
+      "detail": "Perpetual Calendar 44",
+      "type": "dress",
+      "image": "Portugieser-perpetual-calendar-44.png",
+      "link": "https://www.iwc.com/us/en/watch-collections/portugieser/iw503703-portugieser-perpetual-calendar-44.html",
+      "price": 47500,
+      "ref": "IW503703",
+      "movement": "52616 Calibre",
+      "frequency": 28800,
+      "diameter": 44.4,
+      "thickness": 14.9,
+      "water_resistance": 50,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["blue"]
     }
   ]
 }
