@@ -124,6 +124,25 @@
       "crystal": "mineral glass",
       "strap": "rubber",
       "color": ["black"]
+    },
+    {
+      "id": "farbur01",
+      "brand": "Farer",
+      "collection": "Moonphase",
+      "detail": "Burbridge",
+      "type": "dress",
+      "image": "burbridge.jpeg",
+      "link": "https://usd.farer.com/products/burbidge",
+      "price": 1695,
+      "ref": "burbridge",
+      "movement": "SW288-1",
+      "frequency": 28800,
+      "diameter": 38.5,
+      "thickness": 10.5,
+      "water_resistance": 50,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["blue", "pink"]
     }
   ]
 }
