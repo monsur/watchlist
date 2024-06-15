@@ -115,25 +115,6 @@
       "color": ["blue", "red", "black"]
     },
     {
-      "id": "iwcpil01",
-      "brand": "IWC",
-      "collection": "Pilot",
-      "detail": "Big Pilot Watch 43",
-      "type": "pilot",
-      "image": "iwc-big-pilot.jpg",
-      "link": "https://www.iwc.com/us/en/watch-collections/pilot-watches/iw329301-big-pilots-watch-43.html",
-      "price": 8950,
-      "ref": "IW329301",
-      "movement": "82100 Calibre",
-      "frequency": 28800,
-      "diameter": 43,
-      "thickness": 13.6,
-      "water_resistance": 100,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["black"]
-    },
-    {
       "id": "cartan01",
       "brand": "Cartier",
       "collection": "Tank",
