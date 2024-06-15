@@ -11,7 +11,7 @@ export default class Helpers {
 
   static formatMoney = (value: any) => moneyFormatter.format(value);
 
-  static getItemUrl = (id: string) => {
-    return "#/item/" + id
+  static getItemUrl = (id: string, source: string) => {
+    return "#/item/" + id + "?source=" + source;
   }
 }

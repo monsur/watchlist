@@ -69,7 +69,7 @@ function App() {
   return (
     <div className="App">
       <Header title={data.title} filters={filters} />
-      <Grid data={dataCopy} />
+      <Grid data={dataCopy} source={data.source} />
       <Stats data={dataCopy} />
     </div>
   );

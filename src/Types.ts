@@ -21,6 +21,7 @@ export interface WatchData {
 
 export interface PageData {
   title: string;
+  source: string;
   watches: WatchData[];
 }
 
