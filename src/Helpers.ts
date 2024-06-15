@@ -10,4 +10,8 @@ export default class Helpers {
     process.env.PUBLIC_URL + "/images/" + image;
 
   static formatMoney = (value: any) => moneyFormatter.format(value);
+
+  static getItemUrl = (id: string) => {
+    return "#/item/" + id
+  }
 }

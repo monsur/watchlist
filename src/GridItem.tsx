@@ -6,7 +6,7 @@ function GridItem(props: { item: WatchData }) {
   const item = props.item;
   return (
     <div>
-      <a href={"#/item/" + item.id}>
+      <a href={Helpers.getItemUrl(item.id)}>
         <img
           style={{ maxWidth: "50%" }}
           src={Helpers.getImageUrl(item.image)}
