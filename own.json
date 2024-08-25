@@ -21,6 +21,23 @@
       "color": ["black"]
     },
     {
+      "id": "swamoon01",
+      "brand": "Swatch",
+      "collection": "Bioceramic Moonphase",
+      "detail": "Mission to Moonphase",
+      "type": "chronograph",
+      "image": "moonphase.png",
+      "link": "https://www.swatch.com/en-us/bioceramic-moonswatch-collection/mission-to-the-moonphase/full-moon.html",
+      "price": 310,
+      "ref": "SO33W700",
+      "movement": "quartz",
+      "diameter": 42,
+      "thickness": 13.75,
+      "water_resistance": 30,
+      "strap": "velcro",
+      "color": ["white"]
+    },
+    {
       "id": "omespe01",
       "brand": "Omega",
       "collection": "Speedmaster",
@@ -195,6 +212,23 @@
       "water_resistance": 30,
       "strap": "velcro",
       "color": ["gray", "maroon"]
+    },
+    {
+      "id": "swamoon03",
+      "brand": "The Camden Watch Company",
+      "collection": "Special Edition GMT Watch Greenwich Edition",
+      "type": "travel",
+      "image": "Camden-Watches-Greenwich-Edition.jpg",
+      "link": "https://shop.rmg.co.uk/products/the-camden-watch-company-gmt-watch-greenwich-edition",
+      "price": 257,
+      "ref": "27",
+      "movement": "quartz",
+      "diameter": 37,
+      "thickness": 8.4,
+      "water_resistance": 50,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["blue", "gold"]
     }
   ]
 }
