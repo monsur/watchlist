@@ -689,23 +689,6 @@
       "color": ["black"]
     },
     {
-      "id": "swamoon01",
-      "brand": "Swatch",
-      "collection": "Bioceramic Moonphase",
-      "detail": "Mission to Moonphase",
-      "type": "chronograph",
-      "image": "moonphase.png",
-      "link": "https://www.swatch.com/en-us/bioceramic-moonswatch-collection/mission-to-the-moonphase/full-moon.html",
-      "price": 310,
-      "ref": "SO33W700",
-      "movement": "quartz",
-      "diameter": 42,
-      "thickness": 13.75,
-      "water_resistance": 30,
-      "strap": "velcro",
-      "color": ["white"]
-    },
-    {
       "id": "iwcpor01",
       "brand": "IWC",
       "collection": "Portugieser",
