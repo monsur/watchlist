@@ -169,6 +169,25 @@
       "color": ["green", "pink"]
     },
     {
+      "id": "farint01",
+      "brand": "Farer",
+      "collection": "Integra",
+      "detail": "Peralum",
+      "type": "dress",
+      "image": "farer-integra.png",
+      "link": "https://usd.farer.com/products/perlarum",
+      "price": 1765,
+      "ref": "Peralum",
+      "movement": "Sellita SW300-1",
+      "frequency": 28800,
+      "diameter": 38.5,
+      "thickness": 10.3,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": ["white"]
+    },
+    {
       "id": "farroc01",
       "brand": "Farer",
       "collection": "Roche II",
