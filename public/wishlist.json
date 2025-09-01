@@ -504,7 +504,7 @@
       "color": ["blue", "gold"]
     },
     {
-      "id": "brecla01",
+      "id": "brecla02",
       "brand": "Breguet",
       "collection": "Classique Souscription",
       "type": "dress",
@@ -545,9 +545,9 @@
       "brand": "Breguet",
       "collection": "Classique 7327",
       "type": "dress",
-      "image": "breguet-classique.jpg",
-      "link": "https://www.breguet.com/en/timepieces/new-models-classique/7327",
-      "price": 80200,
+      "image": "breguet-classique.png",
+      "link": "https://www.breguet.com/en/watches/classique/classique-quantieme-perpetuel-7327/7327br119vu",
+      "price": 98300,
       "ref": "7327BR/11/9VU",
       "movement": "502.3.P",
       "frequency": 21600,
