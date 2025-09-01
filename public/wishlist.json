@@ -115,25 +115,6 @@
       "color": ["green"]
     },
     {
-      "id": "hamame01",
-      "brand": "Hamilton",
-      "collection": "American Classic",
-      "detail": "Intra-matic Auto Chrono",
-      "type": "chronograph",
-      "image": "hamame01.png",
-      "link": "https://www.hamiltonwatch.com/en-us/h38416111-american-classic-intra-matic-auto-chrono.html",
-      "price": 2345,
-      "ref": "H38416111",
-      "movement": "H-31",
-      "frequency": 28800,
-      "diameter": 40,
-      "thickness": 14.45,
-      "water_resistance": 100,
-      "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["black", "white"]
-    },
-    {
       "id": "ordicb01",
       "brand": "Oris",
       "collection": "Divers",
