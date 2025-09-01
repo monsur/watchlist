@@ -134,25 +134,6 @@
       "color": ["black", "white"]
     },
     {
-      "id": "ooo01",
-      "brand": "Oak & Oscar",
-      "collection": "Olmsted",
-      "detail": "38",
-      "type": "field",
-      "image": "oando-olmsted.png",
-      "link": "https://oakandoscar.com/products/the-olmsted-38?variant=32109538279477",
-      "price": 1575,
-      "ref": "Olmsted 38",
-      "movement": "SW300",
-      "frequency": 28800,
-      "diameter": 38,
-      "water_resistance": 100,
-      "thickness": 10.8,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["orange", "white"]
-    },
-    {
       "id": "ordicb01",
       "brand": "Oris",
       "collection": "Divers",
