@@ -3,6 +3,24 @@
   "source": "wishlist",
   "watches": [
     {
+      "id": "brecla01",
+      "brand": "Breguet",
+      "collection": "Classique Souscription",
+      "type": "dress",
+      "image": "breguet-classique-souscription.png",
+      "link": "https://www.breguet.com/en/watches/classique/classique-souscription-2025/2025bh289w6",
+      "price": 53600,
+      "ref": "2025BH/28/9W6",
+      "movement": "VS00",
+      "frequency": 21600,
+      "diameter": 40,
+      "thickness": 10.8,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "alligator",
+      "color": ["blue", "gold"]
+    },
+    {
       "id": "omespe01",
       "brand": "Omega",
       "collection": "Speedmaster",
