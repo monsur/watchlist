@@ -191,17 +191,17 @@
       "collection": "Oyster Perpetual",
       "type": "dress",
       "image": "rolex-oyster.png",
-      "link": "https://www.rolex.com/en-us/watches/oyster-perpetual/m126000-0002",
-      "price": 6100,
-      "ref": "12600",
+      "link": "https://www.rolex.com/en-us/watches/oyster-perpetual/m134300-0009",
+      "price": 6650,
+      "ref": "134300",
       "movement": "3230, Manufacture Rolex",
       "frequency": 28800,
-      "diameter": 36,
+      "diameter": 41,
       "thickness": 11.5,
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["black"]
+      "color": ["blue"]
     },
     {
       "id": "omseaq01",
