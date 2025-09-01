@@ -115,24 +115,6 @@
       "color": ["green"]
     },
     {
-      "id": "ordicb01",
-      "brand": "Oris",
-      "collection": "Divers",
-      "detail": "Carl Brashear Calibre 401 Limited Edition",
-      "type": "dive",
-      "image": "oris-carl-brashear.jpg",
-      "link": "https://www.oris.ch/en/watch/carl-brashear-calibre-401-limited-edition/01-401-7764-3185-set",
-      "price": 4200,
-      "ref": "01 401 7764 3185-Set",
-      "movement": "Oris 401",
-      "frequency": 28800,
-      "diameter": 40,
-      "water_resistance": 100,
-      "crystal": "sapphire",
-      "strap": "fabric",
-      "color": ["bronze", "blue"]
-    },
-    {
       "id": "frecla01",
       "brand": "Frederique Constant",
       "collection": "Classic Worldtimer Manufacture",
