@@ -40,7 +40,7 @@
       "color": ["white", "blue"]
     },
     {
-      "id": "gssbga01",
+      "id": "casgsho01",
       "brand": "Casio",
       "collection": "G Shock",
       "detail": "GA2100-1A1",
@@ -146,7 +146,7 @@
       "color": ["white"]
     },
     {
-      "id": "swamoon01",
+      "id": "swamoon02",
       "brand": "Swatch",
       "collection": "Bioceramic Moonphase",
       "detail": "Mission to the Sun",
@@ -163,7 +163,7 @@
       "color": ["yellow"]
     },
     {
-      "id": "swamoon02",
+      "id": "swamoon03",
       "brand": "Swatch",
       "collection": "Bioceramic Moonphase",
       "detail": "Mission to Jupiter",
@@ -180,7 +180,7 @@
       "color": ["brown", "orange"]
     },
     {
-      "id": "swamoon03",
+      "id": "swamoon04",
       "brand": "Swatch",
       "collection": "Bioceramic Moonphase",
       "detail": "Mission to Pluto",
@@ -197,7 +197,7 @@
       "color": ["gray", "maroon"]
     },
     {
-      "id": "swamoon03",
+      "id": "camgmt01",
       "brand": "The Camden Watch Company",
       "collection": "Special Edition GMT Watch Greenwich Edition",
       "type": "travel",
