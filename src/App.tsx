@@ -21,7 +21,7 @@ import { useEffect } from "react";
 // Multiple filters can be specified.
 // In the case of multiple filters, ALL filters must match.
 // e.g. "f:brand=rolex&f:color=orange" will match ONLY gold rolex.
-// 
+//
 // Sorting syntax: sort=<field1>|<asc/desc>,<field2>|<asc/desc>
 // Fields are in precdence order.
 // e.g field1 will be sorted before field2.
@@ -32,6 +32,7 @@ function App() {
   const data = useLoaderData() as PageData;
   const filters = new Filters(data, searchParams);
 
+  // Save and restore scroll position using sessionStorage.
   useEffect(() => {
     const handleScroll = () => {
       sessionStorage.setItem("scrollPosition", window.scrollY.toString());
@@ -68,7 +69,7 @@ function App() {
           return c;
         }
       }
-      return 0;    
+      return 0;
     }
   }
 
