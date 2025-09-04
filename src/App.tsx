@@ -6,7 +6,6 @@ import { useSearchParams, useLoaderData } from "react-router-dom";
 import { PageData } from "./Types";
 import Filters from "./Filters";
 import Sorter from "./Sorter";
-import { useEffect } from "react";
 
 // Sort/Filter syntax
 // Example: https://localhost/watchlist/#/?f:brand=rolex&sort=price|desc
@@ -31,24 +30,6 @@ function App() {
   const [searchParams] = useSearchParams();
   const data = useLoaderData() as PageData;
   const filters = new Filters(data, searchParams);
-
-  // Save and restore scroll position using sessionStorage.
-  useEffect(() => {
-    const handleScroll = () => {
-      sessionStorage.setItem("scrollPosition", window.scrollY.toString());
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    const scrollPosition = sessionStorage.getItem("scrollPosition");
-    if (scrollPosition) {
-      window.scrollTo(0, parseInt(scrollPosition, 10));
-    }
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   let sortFields = ["rank", "price"];
   let sortParam = searchParams.get("sort")
