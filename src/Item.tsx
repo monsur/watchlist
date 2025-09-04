@@ -102,13 +102,15 @@ function Item() {
               <Grid2 size={{ xs: 12, md: 6 }}>
                 <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                   <Typography 
-                    variant="h4" 
                     component="h1" 
                     gutterBottom
                     sx={{ 
-                      fontWeight: 600,
+                      fontFamily: '"Prompt", sans-serif',
+                      fontWeight: 500,
+                      textTransform: 'uppercase',
                       fontSize: { xs: '1.75rem', sm: '2rem', md: '2.25rem' },
-                      color: 'primary.main'
+                      color: '#111',
+                      mt: { xs: 1, sm: 1.5 }
                     }}
                   >
                     {item.brand}
@@ -118,9 +120,9 @@ function Item() {
                     variant="h6" 
                     gutterBottom
                     sx={{ 
-                      color: 'text.secondary',
                       fontSize: { xs: '1.1rem', sm: '1.25rem' },
-                      mb: 2
+                      mb: 2,
+                      mt: { xs: 0.75, sm: 0.75 }
                     }}
                   >
                     {item.collection}
@@ -142,10 +144,10 @@ function Item() {
                   <Typography 
                     variant="h5" 
                     sx={{ 
-                      fontWeight: 700,
-                      color: 'success.main',
+                      fontWeight: 400,
                       mb: 3,
-                      fontSize: { xs: '1.5rem', sm: '1.75rem' }
+                      fontSize: { xs: '1.5rem', sm: '1.75rem' },
+                      mt: { xs: 0.25, sm: 0.25 }
                     }}
                   >
                     {Helpers.formatMoney(item.price)}
