@@ -1,5 +1,6 @@
 import "./Item.css";
 import { useParams, useNavigate, useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Helpers from "./Helpers";
 import AppBar from "@mui/material/AppBar";
@@ -8,12 +9,21 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Grid2 from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { PageData, WatchData } from "./Types";
 
 function Item() {
   const { itemId } = useParams();
   const navigate = useNavigate();
   const data = useLoaderData() as PageData;
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function getItem() : WatchData {
     let item = data.watches.find((element) => element.id === itemId);
@@ -42,45 +52,140 @@ function Item() {
   }
 
   return (
-    <Box className="Item">
-      <Box sx={{ marginBottom: "100px" }}>
-        <AppBar position="fixed">
-          <Toolbar>
-            <IconButton
-              onClick={() => navigate(-1)}
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <ArrowBackIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              {data.title}
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </Box>
-      <Grid2 container spacing={2}>
-        <Grid2>
-          <img
-            src={Helpers.getImageUrl(item.image)}
-            alt={item.brand + " " + item.collection}
-          ></img>
+    <Box className="Item" sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
+      <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1 }}>
+        <Toolbar>
+          <IconButton
+            onClick={() => navigate(-1)}
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="back"
+            sx={{ mr: 2 }}
+          >
+            <ArrowBackIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            {data.title}
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      
+      <Container maxWidth="lg" sx={{ mt: { xs: 8, sm: 9 }, py: 3 }}>
+        <Grid2 
+          container 
+          spacing={{ xs: 2, md: 4 }} 
+          sx={{ alignItems: { xs: 'center', md: 'flex-start' } }}
+        >
+              <Grid2 size={{ xs: 12, md: 6 }}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    mb: { xs: 2, md: 0 }
+                  }}
+                >
+                  <img
+                    src={Helpers.getImageUrl(item.image)}
+                    alt={item.brand + " " + item.collection}
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: isMobile ? '300px' : '400px',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      borderRadius: '8px'
+                    }}
+                  />
+                </Box>
+              </Grid2>
+              
+              <Grid2 size={{ xs: 12, md: 6 }}>
+                <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+                  <Typography 
+                    variant="h4" 
+                    component="h1" 
+                    gutterBottom
+                    sx={{ 
+                      fontWeight: 600,
+                      fontSize: { xs: '1.75rem', sm: '2rem', md: '2.25rem' },
+                      color: 'primary.main'
+                    }}
+                  >
+                    {item.brand}
+                  </Typography>
+                  
+                  <Typography 
+                    variant="h6" 
+                    gutterBottom
+                    sx={{ 
+                      color: 'text.secondary',
+                      fontSize: { xs: '1.1rem', sm: '1.25rem' },
+                      mb: 2
+                    }}
+                  >
+                    {item.collection}
+                  </Typography>
+                  
+                  {detail && (
+                    <Typography 
+                      variant="body1" 
+                      sx={{ 
+                        mb: 3,
+                        lineHeight: 1.6,
+                        fontSize: { xs: '0.95rem', sm: '1rem' }
+                      }}
+                    >
+                      {item.detail}
+                    </Typography>
+                  )}
+                  
+                  <Typography 
+                    variant="h5" 
+                    sx={{ 
+                      fontWeight: 700,
+                      color: 'success.main',
+                      mb: 3,
+                      fontSize: { xs: '1.5rem', sm: '1.75rem' }
+                    }}
+                  >
+                    {Helpers.formatMoney(item.price)}
+                  </Typography>
+                  
+                  <Box sx={{ mb: 2 }}>
+                    <Typography 
+                      variant="body2" 
+                      component="a" 
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{ 
+                        color: 'primary.main',
+                        textDecoration: 'none',
+                        '&:hover': { textDecoration: 'underline' },
+                        fontSize: { xs: '0.9rem', sm: '1rem' }
+                      }}
+                    >
+                      View on {getDomain(item.link)}
+                    </Typography>
+                  </Box>
+                  
+                  <Box sx={{ 
+                    display: 'flex', 
+                    flexDirection: { xs: 'column', sm: 'row' },
+                    gap: { xs: 1, sm: 3 },
+                    mt: 2
+                  }}>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      <strong>Diameter:</strong> {item.diameter}mm
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      <strong>Thickness:</strong> {item.thickness}mm
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid2>
         </Grid2>
-        <Grid2>
-          <div>{item.brand}</div>
-          <div>{item.collection}</div>
-          {detail}
-          <div>{Helpers.formatMoney(item.price)}</div>
-          <div>
-            <a href={item.link}>{getDomain(item.link)}</a>
-          </div>
-          <div>Diameter: {item.diameter}mm</div>
-          <div>Thickness: {item.thickness}mm</div>
-        </Grid2>
-      </Grid2>
+      </Container>
     </Box>
   );
 }
