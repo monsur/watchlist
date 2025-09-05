@@ -54,18 +54,18 @@ function Item() {
   return (
     <Box className="Item" sx={{ minHeight: '100vh' }}>
       <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1 }}>
-        <Toolbar>
+        <Toolbar sx={{ position: 'relative' }}>
           <IconButton
             onClick={() => navigate(-1)}
             size="large"
             edge="start"
             color="inherit"
             aria-label="back"
-            sx={{ mr: 2 }}
+            sx={{ position: 'absolute', left: 8 }}
           >
             <ArrowBackIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ width: '100%', textAlign: 'center' }}>
             {data.title}
           </Typography>
         </Toolbar>

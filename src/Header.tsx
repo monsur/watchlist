@@ -15,18 +15,18 @@ function Header(props: { title: string; filters: Filters }) {
   return (
     <Box sx={{ marginBottom: "100px" }}>
       <AppBar position="fixed">
-        <Toolbar>
+        <Toolbar sx={{ position: 'relative' }}>
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ position: 'absolute', left: 8 }}
             onClick={() => setIsDrawerOpen(true)}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ width: '100%', textAlign: 'center' }}>
             {props.title}
           </Typography>
         </Toolbar>
