@@ -6,6 +6,7 @@ import { useSearchParams, useLoaderData } from "react-router-dom";
 import { PageData } from "./Types";
 import Filters from "./Filters";
 import Sorter from "./Sorter";
+import { useEffect } from "react";
 
 // Sort/Filter syntax
 // Example: https://localhost/watchlist/#/?f:brand=rolex&sort=price|desc
@@ -30,6 +31,40 @@ function App() {
   const [searchParams] = useSearchParams();
   const data = useLoaderData() as PageData;
   const filters = new Filters(data, searchParams);
+
+  useEffect(() => {
+    // Save scroll position when clicking on any link/item
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('a') || target.closest('[data-testid]') || target.closest('.grid-item')) {
+        localStorage.setItem('mainPageScrollPosition', window.scrollY.toString());
+      }
+    };
+
+    // Save scroll position on page unload (for refresh, close tab, etc.)
+    const handleBeforeUnload = () => {
+      localStorage.setItem('mainPageScrollPosition', window.scrollY.toString());
+    };
+
+    document.addEventListener('click', handleClick);
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  // Restore scroll position after content loads
+  useEffect(() => {
+    const savedScrollPosition = localStorage.getItem('mainPageScrollPosition');
+    if (savedScrollPosition && data.watches.length > 0) {
+      const scrollY = parseInt(savedScrollPosition, 10);
+      setTimeout(() => {
+        window.scrollTo({ top: scrollY, behavior: 'instant' });
+      }, 10);
+    }
+  }, [data.watches.length]);
 
   let sortFields = ["rank", "price"];
   let sortParam = searchParams.get("sort")
