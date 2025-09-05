@@ -52,7 +52,7 @@ function Item() {
   }
 
   return (
-    <Box className="Item" sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
+    <Box className="Item" sx={{ minHeight: '100vh' }}>
       <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <IconButton
