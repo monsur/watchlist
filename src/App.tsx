@@ -103,7 +103,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header title={data.title} filters={filters} />
+      <Header 
+        title={data.title} 
+        leftIconType="menu" 
+        onLeftIconClick={() => {}} 
+        filters={filters} 
+      />
       <Grid data={dataCopy} source={data.source} />
       <Stats data={dataCopy} />
     </div>

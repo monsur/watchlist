@@ -2,12 +2,9 @@ import "./Item.css";
 import { useParams, useNavigate, useLoaderData } from "react-router-dom";
 import { useEffect } from "react";
 import Box from "@mui/material/Box";
-import Helpers from "./Helpers";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Helpers from "./Helpers";
+import Header from "./Header";
 import Grid2 from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import { useTheme } from "@mui/material/styles";
@@ -53,23 +50,12 @@ function Item() {
 
   return (
     <Box className="Item" sx={{ minHeight: '100vh' }}>
-      <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1 }}>
-        <Toolbar sx={{ position: 'relative' }}>
-          <IconButton
-            onClick={() => navigate(-1)}
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="back"
-            sx={{ position: 'absolute', left: 8 }}
-          >
-            <ArrowBackIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ width: '100%', textAlign: 'center' }}>
-            {data.title}
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Header 
+        title={data.title}
+        leftIconType="back"
+        onLeftIconClick={() => navigate(-1)}
+        zIndex={theme.zIndex.drawer + 1}
+      />
       
       <Container maxWidth="lg" sx={{ mt: { xs: 8, sm: 9 }, py: 3 }}>
         <Grid2 
