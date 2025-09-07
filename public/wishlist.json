@@ -429,6 +429,25 @@
       "color": ["gray"]
     },
     {
+      "id": "bgp01",
+      "brand": "Bamford x Girard-Perregaux",
+      "collection": "Laureato",
+      "detail": "ghost",
+      "type": "sport",
+      "image": "gp_ghost_ceramic.png",
+      "link": "https://www.bamfordwatchdepartment.com/product/bamford-watch-department-x-girard-perregaux-laureato-ghost-ceramic-bracelet/",
+      "price": 16100,
+      "ref": "BWD-COL-GP-LA-GHOST-C",
+      "movement": "GP03300-0139",
+      "frequency": 28800,
+      "diameter": 38,
+      "thickness": 10.2,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "ceramic",
+      "color": ["white"]
+    },
+    {
       "id": "fpjcla01",
       "brand": "F.P. Journe",
       "collection": "Classique",
@@ -593,6 +612,24 @@
       "crystal": "sapphire",
       "strap": "leather",
       "color": ["green"]
+    },
+    {
+      "id": "berqua01",
+      "brand": "Berneron",
+      "collection": "Quantieme",
+      "detail": "Annuel Black",
+      "type": "calendar",
+      "image": "berneron-quantieme.jpg",
+      "link": "https://www.berneron.ch/quantieme-annuel-black",
+      "price": 175000,
+      "ref": "quantieme-annuel-black",
+      "movement": "Caliber 595",
+      "frequency": 21600,
+      "diameter": 38,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": ["black"]
     },
     {
       "id": "patgra02",
