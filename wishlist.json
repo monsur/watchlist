@@ -18,7 +18,9 @@
       "water_resistance": 200,
       "crystal": "plastic",
       "strap": "rubber",
-      "color": ["white"]
+      "color": [
+        "white"
+      ]
     },
     {
       "id": "islnor01",
@@ -37,7 +39,9 @@
       "water_resistance": 200,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["green"]
+      "color": [
+        "green"
+      ]
     },
     {
       "id": "faraqu01",
@@ -56,7 +60,10 @@
       "water_resistance": 200,
       "crystal": "sapphire",
       "strap": "rubber",
-      "color": ["green", "pink"]
+      "color": [
+        "green",
+        "pink"
+      ]
     },
     {
       "id": "farroc01",
@@ -74,7 +81,11 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["blue", "white", "red"]
+      "color": [
+        "blue",
+        "white",
+        "red"
+      ]
     },
     {
       "id": "farint01",
@@ -93,7 +104,9 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["white"]
+      "color": [
+        "white"
+      ]
     },
     {
       "id": "meisin01",
@@ -112,7 +125,9 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["ivory"]
+      "color": [
+        "ivory"
+      ]
     },
     {
       "id": "oriart01",
@@ -130,7 +145,9 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["green"]
+      "color": [
+        "green"
+      ]
     },
     {
       "id": "cartan01",
@@ -149,7 +166,10 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["blue", "white"]
+      "color": [
+        "blue",
+        "white"
+      ]
     },
     {
       "id": "frecla01",
@@ -167,7 +187,9 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["blue"]
+      "color": [
+        "blue"
+      ]
     },
     {
       "id": "omseaq01",
@@ -185,7 +207,10 @@
       "water_resistance": 150,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange", "white"]
+      "color": [
+        "orange",
+        "white"
+      ]
     },
     {
       "id": "rolroloys01",
@@ -203,7 +228,9 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["blue"]
+      "color": [
+        "blue"
+      ]
     },
     {
       "id": "omespe02",
@@ -222,7 +249,10 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["red", "white"]
+      "color": [
+        "red",
+        "white"
+      ]
     },
     {
       "id": "rolmil01",
@@ -240,7 +270,10 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["green", "orange"]
+      "color": [
+        "green",
+        "orange"
+      ]
     },
     {
       "id": "omespe01",
@@ -259,7 +292,10 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["black", "orange"]
+      "color": [
+        "black",
+        "orange"
+      ]
     },
     {
       "id": "brenav01",
@@ -278,7 +314,9 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["black"]
+      "color": [
+        "black"
+      ]
     },
     {
       "id": "rolexp01",
@@ -297,7 +335,10 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange", "white"]
+      "color": [
+        "orange",
+        "white"
+      ]
     },
     {
       "id": "rolgmt01",
@@ -316,26 +357,11 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["blue", "red", "black"]
-    },
-    {
-      "id": "brenav02",
-      "brand": "Breitling",
-      "collection": "Navitimer",
-      "detail": "Navitimer B02 Chronograph 41 Cosmonaute",
-      "type": "chronograph",
-      "image": "navitimer-b02-cosmonaute.jpg",
-      "link": "https://www.breitling.com/us-en/watches/navitimer/navitimer-b02-chronograph-41/PB02301A1B1/",
-      "price": 12150,
-      "ref": "PB02301A1B1A1",
-      "movement": "Breitling B02",
-      "frequency": 28800,
-      "diameter": 41,
-      "thickness": 13,
-      "water_resistance": 30,
-      "crystal": "sapphire",
-      "strap": "steel",
-      "color": ["black"]
+      "color": [
+        "blue",
+        "red",
+        "black"
+      ]
     },
     {
       "id": "zenchr01",
@@ -354,7 +380,10 @@
       "water_resistance": 100,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["blue", "gray"]
+      "color": [
+        "blue",
+        "gray"
+      ]
     },
     {
       "id": "jaemas01",
@@ -373,25 +402,51 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["blue"]
+      "color": [
+        "blue"
+      ]
     },
     {
-      "id": "chae8hf01",
-      "brand": "Chopard",
-      "collection": "Alpine Eagle",
-      "detail": "Cadence 8HF",
-      "type": "dress",
-      "image": "Alpine-Eagle-Cadence-8HF.png",
-      "link": "https://www.chopard.com/en-us/watch/298600-3020.html",
-      "price": 23100,
-      "ref": " 298600-3020",
-      "movement": "Chopard 01.12-C",
-      "frequency": 57600,
+      "id": "brenav02",
+      "brand": "Breitling",
+      "collection": "Navitimer",
+      "detail": "Navitimer B02 Chronograph 41 Cosmonaute",
+      "type": "chronograph",
+      "image": "navitimer-b02-cosmonaute.jpg",
+      "link": "https://www.breitling.com/us-en/watches/navitimer/navitimer-b02-chronograph-41/PB02301A1B1/",
+      "price": 12150,
+      "ref": "PB02301A1B1A1",
+      "movement": "Breitling B02",
+      "frequency": 28800,
       "diameter": 41,
-      "water_resistance": 100,
+      "thickness": 13,
+      "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["orange", "black"]
+      "color": [
+        "black"
+      ]
+    },
+    {
+      "id": "bgp01",
+      "brand": "Bamford x Girard-Perregaux",
+      "collection": "Laureato",
+      "detail": "ghost",
+      "type": "sport",
+      "image": "gp_ghost_ceramic.png",
+      "link": "https://www.bamfordwatchdepartment.com/product/bamford-watch-department-x-girard-perregaux-laureato-ghost-ceramic-bracelet/",
+      "price": 16100,
+      "ref": "BWD-COL-GP-LA-GHOST-C",
+      "movement": "GP03300-0139",
+      "frequency": 28800,
+      "diameter": 38,
+      "thickness": 10.2,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "ceramic",
+      "color": [
+        "white"
+      ]
     },
     {
       "id": "vacpat01",
@@ -411,6 +466,27 @@
       "strap": "leather"
     },
     {
+      "id": "chae8hf01",
+      "brand": "Chopard",
+      "collection": "Alpine Eagle",
+      "detail": "Cadence 8HF",
+      "type": "dress",
+      "image": "Alpine-Eagle-Cadence-8HF.png",
+      "link": "https://www.chopard.com/en-us/watch/298600-3020.html",
+      "price": 23100,
+      "ref": " 298600-3020",
+      "movement": "Chopard 01.12-C",
+      "frequency": 57600,
+      "diameter": 41,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": [
+        "orange",
+        "black"
+      ]
+    },
+    {
       "id": "audroy01",
       "brand": "Audemars Piguet",
       "collection": "Royal Oak",
@@ -426,7 +502,9 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "steel",
-      "color": ["gray"]
+      "color": [
+        "gray"
+      ]
     },
     {
       "id": "fpjcla01",
@@ -445,7 +523,30 @@
       "water_resistance": 0,
       "crystal": "sapphire",
       "strap": "leather",
-      "color":["blue"]
+      "color": [
+        "blue"
+      ]
+    },
+    {
+      "id": "ala18101",
+      "brand": "A. Lange & Söhne",
+      "collection": "1815",
+      "type": "dress",
+      "image": "als.jpg",
+      "link": "https://www.alange-soehne.com/ww-en/timepieces/1815/1815/1815-in-18-carat-pink-gold-235-032",
+      "price": 50000,
+      "ref": "235.032 / LSLS2354AD",
+      "movement": "1400",
+      "frequency": 28800,
+      "diameter": 38.5,
+      "thickness": 8.8,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": [
+        "blue",
+        "gold"
+      ]
     },
     {
       "id": "iwcpor01",
@@ -464,7 +565,9 @@
       "water_resistance": 50,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["blue"]
+      "color": [
+        "blue"
+      ]
     },
     {
       "id": "vacpat02",
@@ -483,25 +586,9 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["gold"]
-    },
-    {
-      "id": "ala18101",
-      "brand": "A. Lange & Söhne",
-      "collection": "1815",
-      "type": "dress",
-      "image": "als.jpg",
-      "link": "https://www.alange-soehne.com/ww-en/timepieces/1815/1815/1815-in-18-carat-pink-gold-235-032",
-      "price": 50000,
-      "ref": "235.032 / LSLS2354AD",
-      "movement": "1400",
-      "frequency": 28800,
-      "diameter": 38.5,
-      "thickness": 8.8,
-      "water_resistance": 30,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue", "gold"]
+      "color": [
+        "gold"
+      ]
     },
     {
       "id": "brecla02",
@@ -519,7 +606,10 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "alligator",
-      "color": ["blue", "gold"]
+      "color": [
+        "blue",
+        "gold"
+      ]
     },
     {
       "id": "pataqu01",
@@ -538,43 +628,10 @@
       "water_resistance": 120,
       "crystal": "sapphire",
       "strap": "composite",
-      "color": ["black", "orange"]
-    },
-    {
-      "id": "brecla01",
-      "brand": "Breguet",
-      "collection": "Classique 7327",
-      "type": "dress",
-      "image": "breguet-classique.png",
-      "link": "https://www.breguet.com/en/watches/classique/classique-quantieme-perpetuel-7327/7327br119vu",
-      "price": 98300,
-      "ref": "7327BR/11/9VU",
-      "movement": "502.3.P",
-      "frequency": 21600,
-      "diameter": 39,
-      "thickness": 9.13,
-      "water_resistance": 30,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["blue", "gold"]
-    },
-    {
-      "id": "patgra01",
-      "brand": "Patek Philippe",
-      "collection": "Grand Complications",
-      "type": "calendar",
-      "image": "5327R_001.jpg",
-      "link": "https://www.patek.com/en/collection/grand-complications/5327R-001",
-      "price": 114709,
-      "ref": "5327R-001",
-      "movement": "240 Q",
-      "frequency": 21600,
-      "diameter": 39,
-      "thickness": 9.71,
-      "water_resistance": 30,
-      "crystal": "sapphire",
-      "strap": "leather",
-      "color": ["gold"]
+      "color": [
+        "black",
+        "orange"
+      ]
     },
     {
       "id": "hmc01",
@@ -592,7 +649,70 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["green"]
+      "color": [
+        "green"
+      ]
+    },
+    {
+      "id": "brecla01",
+      "brand": "Breguet",
+      "collection": "Classique 7327",
+      "type": "dress",
+      "image": "breguet-classique.png",
+      "link": "https://www.breguet.com/en/watches/classique/classique-quantieme-perpetuel-7327/7327br119vu",
+      "price": 98300,
+      "ref": "7327BR/11/9VU",
+      "movement": "502.3.P",
+      "frequency": 21600,
+      "diameter": 39,
+      "thickness": 9.13,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": [
+        "blue",
+        "gold"
+      ]
+    },
+    {
+      "id": "patgra01",
+      "brand": "Patek Philippe",
+      "collection": "Grand Complications",
+      "type": "calendar",
+      "image": "5327R_001.jpg",
+      "link": "https://www.patek.com/en/collection/grand-complications/5327R-001",
+      "price": 114709,
+      "ref": "5327R-001",
+      "movement": "240 Q",
+      "frequency": 21600,
+      "diameter": 39,
+      "thickness": 9.71,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": [
+        "gold"
+      ]
+    },
+    {
+      "id": "berqua01",
+      "brand": "Berneron",
+      "collection": "Quantieme",
+      "detail": "Annuel Black",
+      "type": "calendar",
+      "image": "berneron-quantieme.jpg",
+      "link": "https://www.berneron.ch/quantieme-annuel-black",
+      "price": 175000,
+      "ref": "quantieme-annuel-black",
+      "movement": "Caliber 595",
+      "frequency": 21600,
+      "diameter": 38,
+      "water_resistance": 30,
+      "crystal": "sapphire",
+      "strap": "leather",
+      "color": [
+        "black"
+      ]
     },
     {
       "id": "patgra02",
@@ -611,7 +731,9 @@
       "water_resistance": 30,
       "crystal": "sapphire",
       "strap": "leather",
-      "color": ["blue"]
+      "color": [
+        "blue"
+      ]
     }
   ]
 }
