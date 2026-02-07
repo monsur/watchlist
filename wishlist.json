@@ -734,6 +734,26 @@
       "color": [
         "blue"
       ]
+    },
+    {
+      "id": "SLGB003G",
+      "brand": "Grand Seiko",
+      "collection": "Evolution 9 Collection",
+      "detail": "UFA",
+      "type": "dress",
+      "image": "SLGB003G.png",
+      "link": "https://www.grand-seiko.com/us-en/collections/slgb003g",
+      "price": 11400,
+      "ref": "SLGB003G",
+      "movement": "9RB2",
+      "diameter": 37.0,
+      "thickness": 11.4,
+      "water_resistance": 100,
+      "crystal": "sapphire",
+      "strap": "steel",
+      "color": [
+        "blue"
+      ]
     }
   ]
 }
